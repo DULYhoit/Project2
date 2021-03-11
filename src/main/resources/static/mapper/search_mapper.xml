@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+	PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+	"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper
+	namespace="kr.or.eutchapedia.search.repository.SearchMapper">
+
+	<!-- 상위 검색 결과 -->
+	<select id="selectTopResult" parameterType="String"
+		resultMap="searchMovieVo">
+		SELECT movie_docid, title, poster_uri, prodyear, nation
+		FROM movie_info
+		WHERE title LIKE '%' || #{findStr} || '%'
+	</select>
+
+	<!-- 영화 검색 결과 -->
+	<select id="selectMovieResult" parameterType="String"
+		resultMap="searchMovieVo">
+		SELECT movie_docid, title, poster_uri, prodyear, nation FROM keyword_info ki
+		JOIN movie_info mi
+		ON ki.fk_movie_docid = mi.movie_docid
+		WHERE ki.keyword_info LIKE '%' || #{findStr} || '%'
+
+	</select>
+
+	<!-- 사용자 검색 결과 -->
+	<select id="selectMemberResult" parameterType="String"
+		resultMap="searchMemberVo">
+		SELECT member_email, member_nickname, member_photo FROM member
+		WHERE member_nickname LIKE  '%' || #{findStr} || '%'
+
+	</select>
+
+	<!-- resultMap -->
+	<resultMap
+		type="kr.or.eutchapedia.search.domain.SearchMovieVo"
+		id="searchMovieVo">
+		<result column="movie_docid" property="movieDocId" />
+		<result column="title" property="title" />
+		<result column="poster_uri" property="posterUri" />
+		<result column="prodyear" property="prodYear" />
+		<result column="nation" property="nation" />
+	</resultMap>
+
+	<resultMap
+		type="kr.or.eutchapedia.search.domain.SearchMemberVo"
+		id="searchMemberVo">
+		<result column="member_email" property="memberEmail" />
+		<result column="member_nickname" property="memberNickname" />
+		<result column="member_photo" property="memberPhoto" />
+
+	</resultMap>
+
+
+</mapper>

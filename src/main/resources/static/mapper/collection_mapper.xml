@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+	PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+	"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper
+	namespace="kr.or.eutchapedia.movie.collection.repository.CollectionMapper">
+
+	
+	<select id="selectCollectionInfo" parameterType="int"
+		resultMap="collectionVo">
+		SELECT p.pick_name, p.pick_index, mi.movie_docid, mi.title,
+		mi.prodyear,
+		mi.nation, mi.poster_uri FROM movie_pick mp
+		JOIN movie_info
+		mi
+		ON mp.fk_movie_docid = mi.movie_docid
+		JOIN pick p
+		ON p.pick_index =
+		mp.fk_pick_index
+		WHERE fk_pick_index =
+		#{_parameter}
+		ORDER BY prodyear desc
+
+
+	</select>
+
+	<resultMap id="collectionVo"
+		type="kr.or.eutchapedia.movie.collection.domain.CollectionVo">
+		<result column="pick_name" property="pickName" />
+		<result column="pick_index" property="pickIndex" />
+		<result column="movie_docid" property="movieDocId" />
+		<result column="title" property="title" />
+		<result column="prodyear" property="prodYear" />
+		<result column="nation" property="nation" />
+		<result column="poster_uri" property="posterUri" />
+
+
+	</resultMap>
+
+</mapper>

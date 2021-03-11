@@ -1,0 +1,107 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap");
+
+.div{
+    font-family: "Noto Sans KR", sans-serif;
+}
+
+.h1{
+    font-weight: "Noto Sans KR", sans-serif;
+}
+
+#title {
+    
+    text-align: center;
+
+}
+
+#searchbar{
+    text-align: center;
+    width: 250px;
+    display:inline-block;
+}
+
+#search-btn{
+    margin-left: 15px;
+    display:inline-block;
+    
+}
+
+#allsize{
+    text-align: center;
+
+}
+
+#select-search{
+    
+    width: 250px;
+    display:inline-block;
+    margin-bottom: 5px;
+}
+
+#search-block{
+    margin-right: 70px;
+    text-align: right;
+
+}
+
+#select-block{
+    width: 250px;
+    display:inline-block;
+    margin-left: 380px;
+}
+
+#title{
+    margin-top: 100px;
+}
+
+#top-search{
+   margin-left: 50px;
+
+}
+
+#table-contorll{
+
+    height: 670px;
+    text-align: center;
+    background-color: white;
+
+}
+
+#delete-btn{
+    margin-left: 20px;
+    
+}
+#allsize{
+    font-family: "Noto Sans KR", sans-serif;
+
+}
+
+
+#page-controll{
+  
+   text-align: center;
+   margin-left: 270px;
+   margin-top: 50px;
+}
+
+.form-group{
+    float: left;
+}
+
+#navigation{
+
+	text-align: center;
+}
+
+
+#chooseBox{
+	margin: auto;
+}
+ul#select-page {
+  
+    margin-left: 430px;
+}
+.page-link{
+	text-align: center;
+	margin: auto;
+}

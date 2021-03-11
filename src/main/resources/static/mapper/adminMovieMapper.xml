@@ -1,0 +1,439 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+	PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+	"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="kr.or.eutchapedia.admin.movie.dao.MovieDao">
+	<!-- 영화목록페이징 -->
+	<resultMap
+		type="kr.or.eutchapedia.admin.movie.entity.MovieInfo" id="moviepage">
+		<id column="id" property="id" />
+		<result column="NUM" property="num" />
+		<result column="MOVIE_DOCID" property="movie_docid" />
+		<result column="TITLE" property="title" />
+		<result column="TITLE_ORG" property="title_Org" />
+		<result column="NATION" property="nation" />
+		<result column="MOVIE_RUNNING_TIME"
+			property="movie_running_time" />
+		<result column="RATING" property="rating" />
+		<result column="PRODYEAR" property="prodyear" />
+		<result column="POSTER_URI" property="poster_uri" />
+		<result column="GENRE" property="genre" />
+		<result column="PLOT" property="plot" />
+		<result column="MOVIE_TRAILER" property="movie_trailer" />
+		<result column="MOVIE_HIT_COUNT" property="movie_hit_count" />
+	</resultMap>
+	<!-- 영화총갯수 -->
+	<resultMap
+		type="kr.or.eutchapedia.admin.movie.entity.MovieCount" id="moviecount">
+		<result column="NUM" property="num" />
+	</resultMap>
+
+	<!-- 픽정보 페이징 -->
+	<resultMap
+		type="kr.or.eutchapedia.admin.movie.entity.PickInfo" id="pickinfo">
+		<result column="NUM" property="num" />
+		<result column="PICK_INDEX" property="pickIndex" />
+		<result column="FK_MEMBER_EMAIL" property="fkMemberEmail" />
+		<result column="PICK_NAME" property="pickName" />
+	</resultMap>
+
+	<resultMap
+		type="kr.or.eutchapedia.admin.movie.entity.PickMovieInfo"
+		id="pickmovieinfo">
+		<result column="FK_MEMBER_EMAIL" property="fkMemberEmail" />
+		<result column="PICK_NAME" property="pickName" />
+		<result column="FK_PICK_INDEX" property="fkPickIndex" />
+		<result column="FK_MOVIE_DOCID" property="movieDocid" />
+		<result column="TITLE" property="title" />
+		<result column="NATION" property="nation" />
+		<result column="GENRE" property="genre" />
+		<result column="MOVIE_HIT_COUNT" property="movieHitCount" />
+	</resultMap>
+	<!-- 더미값 -->
+	<resultMap
+		type="kr.or.eutchapedia.admin.movie.entity.PickInfoDummy"
+		id="pickinfodummy">
+		<result column="FK_PICK_INDEX" property="fkPickIndex" />
+		<result column="FK_MOVIE_DOCID" property="fkMovieDocid" />
+		<result column="FK_MEMBER_EMAIL" property="fkMemberEmail" />
+		<result column="PICK_NAME" property="pickName" />
+	</resultMap>
+	<resultMap
+		type="kr.or.eutchapedia.admin.movie.entity.CommentEnrollment"
+		id="noblind">
+		<result column="NUM" property="num" />
+		<result column="COMMENT_INDEX" property="commentIndex" />
+		<result column="FK_STAR_INDEX" property="fkStarIndex" />
+		<result column="COMMENT_TEXT" property="commentText" />
+		<result column="COMMENT_LIKE_COUNT" property="commentLikeCount" />
+		<result column="COMMENT_REPORT_COUNT"
+			property="commentReportCount" />
+		<result column="COMMENT_BLIND_CHECK"
+			property="commentBlindCheck" />
+		<result column="COMMENT_DATE" property="commentDate" />
+		<result column="FK_MOVIE_DOCID" property="fkMovieDocid" />
+		<result column="FK_MEMBER_EMAIL" property="fkMemberEmail" />
+		<result column="STAR_RATING" property="starRating" />
+	</resultMap>
+	<resultMap
+		type="kr.or.eutchapedia.admin.movie.entity.CommentDetail"
+		id="commentdetail">
+		<result column="FK_MEMBER_EMAIL" property="fkMemberEmail" />
+		<result column="REPORT_TEXT" property="reportText" />
+		<result column="FK_STAR_INDEX" property="fkStarIndex" />
+		<result column="COMMENT_TEXT" property="commentText" />
+		<result column="COMMENT_DATE" property="commentDate" />
+	</resultMap>
+	<resultMap
+		type="kr.or.eutchapedia.admin.movie.entity.Memberdash" id="memberdash">
+		<result column="MEMBER_EMAIL" property="memberEmail" />
+		<result column="MEMBER_NICKNAME" property="memberNickname" />
+		<result column="MEMBER_DATE" property="memberDate" />
+
+	</resultMap>
+	<resultMap
+		type="kr.or.eutchapedia.admin.movie.entity.MovieChart" id="moviechart">
+		<result column="TITLE" property="title" />
+		<result column="MOVIE_HIT_COUNT" property="movieHitCount" />
+
+	</resultMap>
+	<resultMap
+		type="kr.or.eutchapedia.admin.movie.entity.MovieGoodChart"
+		id="moviegoodchart">
+		<result column="TITLE" property="title" />
+		<result column="SUM(COMMENT_LIKE_COUNT)" property="sum" />
+
+	</resultMap>
+
+	<!-- movie리스트뽑아오기 -->
+	<select id="getmovieList" resultMap="moviepage"
+		parameterType="map">
+
+		SELECT * FROM(
+		SELECT ROWNUM NUM, m.*
+		FROM (SELECT *
+		FROM
+		MOVIE_INFO WHERE
+		${field} LIKE '%'||#{query}||'%'
+		) m
+		)
+		WHERE NUM BETWEEN
+		${page} AND
+		${amount}
+
+	</select>
+	<select id="getMovie" resultMap="moviepage" parameterType="map">
+
+		SELECT * FROM(
+		SELECT ROWNUM NUM, m.*
+		FROM (SELECT *
+		FROM
+		MOVIE_INFO WHERE
+		MOVIE_DOCID = #{movieDocid}
+
+		) m
+		)
+
+
+	</select>
+	<select id="getmovieCount" resultMap="moviecount"
+		parameterType="map">
+		SELECT * FROM(
+		SELECT ROWNUM NUM, m.*
+		FROM (SELECT *
+		FROM
+		MOVIE_INFO WHERE
+		${field} LIKE '%'||#{query}||'%'
+		) m
+		)
+	</select>
+	<!-- 픽리스트 페이징 -->
+	<select id="getPickInfoList" resultMap="pickinfo"
+		parameterType="map">
+		SELECT * FROM(
+		SELECT ROWNUM NUM, m.*
+		FROM (SELECT *
+		FROM
+		PICK
+		) m
+		)
+		WHERE NUM BETWEEN ${page} AND ${amount}
+	</select>
+	<select id="getCount" resultMap="moviecount" parameterType="map">
+		SELECT * FROM(
+		SELECT ROWNUM NUM, m.*
+		FROM (SELECT *
+		FROM
+		PICK
+		) m
+		)
+
+	</select>
+	<select id="getPickMovieList" resultMap="pickmovieinfo"
+		parameterType="map">
+		SELECT
+		p.fk_member_email,
+		p.pick_name,
+		mp.fk_pick_index,
+		mi.movie_docid,
+		mi.title,
+		mi.nation,
+		mi.genre,
+		mi.movie_hit_count
+		FROM PICK
+		p INNER JOIN MOVIE_PICK mp ON p.PICK_INDEX = mp.FK_PICK_INDEX
+		INNER
+		JOIN MOVIE_INFO mi ON mp.fk_movie_docid = mi.movie_docid WHERE
+		p.PICK_NAME = #{pickname1}
+	</select>
+
+
+	<select id="getPick" resultMap="pickinfo" parameterType="map">
+		SELECT*
+		FROM PICK
+	</select>
+
+	<select id="getDummy" resultMap="pickinfodummy"
+		parameterType="map">
+		SELECT
+		*
+		FROM MOVIE_PICK mp INNER JOIN PICK p ON
+		mp.fk_pick_index = p.pick_index
+		WHERE p.pick_name = #{collection} AND
+		FK_PICK_INDEX = ${pickindex}
+	</select>
+
+	<insert id="updatePick">
+		INSERT INTO MOVIE_PICK
+		VALUES(MOVIE_PICK_SEQ.nextval,${pick},#{movieid})
+	</insert>
+	<insert id="addPick">
+		INSERT INTO PICK
+		VALUES(PICK_SEQ.nextval,#{userid},#{collection_})
+	</insert>
+	<insert id="addPickMovies">
+		INSERT INTO MOVIE_PICK
+		VALUES(MOVIE_PICK_SEQ.nextval,${pickindex},#{movie})
+	</insert>
+	<insert id="addPickMovies1">
+		INSERT INTO MOVIE_PICK
+		VALUES(MOVIE_PICK_SEQ.nextval,${pickindex1},#{movie})
+	</insert>
+	<select id="getPickMovieforId" resultMap="pickmovieinfo"
+		parameterType="map">
+		SELECT
+		mp.fk_pick_index,
+		mp.fk_movie_docid,
+		p.fk_member_email,
+		p.pick_name,
+		mi.title,
+		mi.nation,
+		mi.genre,
+		mi.movie_hit_count
+		FROM MOVIE_PICK mp INNER JOIN PICK p ON
+		mp.fk_pick_index = p.pick_index
+		INNER JOIN MOVIE_INFO mi ON
+		mi.movie_docid = mp.fk_movie_docid WHERE
+		p.pick_name = #{pickname} AND
+		mp.fk_pick_index = ${pickno} AND p.fk_member_email
+		= #{email}
+	</select>
+	<update id="chopickDel">
+		DELETE FROM MOVIE_PICK WHERE FK_PICK_INDEX =
+		${pickno} AND FK_MOVIE_DOCID =
+		#{docid}
+	</update>
+	<delete id="allpickDel">
+		DELETE FROM PICK WHERE PICK_INDEX = ${fkpickno}
+	</delete>
+	<select id="getNoBlind" resultMap="noblind" parameterType="map">
+		SELECT * FROM(
+		SELECT ROWNUM NUM, m.*
+		FROM (SELECT
+		ec.comment_index,
+		ec.fk_star_index,
+		ec.comment_text,
+		ec.comment_like_count,
+		ec.comment_report_count,
+		ec.comment_blind_check,
+		ec.comment_date,
+		sr.fk_movie_docid,
+		sr.fk_member_email,
+		sr.star_rating
+		FROM EUTCHA_COMMENT
+		ec INNER JOIN STAR_RATING sr ON ec.fk_star_index =
+		sr.star_index WHERE
+		ec.comment_blind_check = 0
+		) m
+		)
+		WHERE NUM BETWEEN
+		${page} AND ${amount}
+	</select>
+	<select id="getBlindCount" resultMap="moviecount"
+		parameterType="map">
+		SELECT * FROM(
+		SELECT ROWNUM NUM, m.*
+		FROM (SELECT
+		ec.comment_index,
+		ec.fk_star_index,
+		ec.comment_text,
+		ec.comment_like_count,
+		ec.comment_report_count,
+		ec.comment_blind_check,
+		ec.comment_date,
+		sr.fk_movie_docid,
+		sr.fk_member_email,
+		sr.star_rating
+		FROM EUTCHA_COMMENT ec INNER JOIN STAR_RATING sr ON ec.fk_star_index =
+		sr.star_index WHERE ec.comment_blind_check = 0
+		) m
+		)
+	</select>
+
+	<select id="getCommentDetail" resultMap="commentdetail"
+		parameterType="map">
+		SELECT * FROM(
+		SELECT ROWNUM NUM, m.*
+		FROM (SELECT * FROM
+		COMMENT_REPORT cr INNER JOIN EUTCHA_COMMENT ec ON cr.fk_comment_index
+		= ec.comment_index WHERE ec.comment_index = ${commentno}
+		) m
+		) WHERE num
+		BETWEEN ${page} AND ${amount}
+
+	</select>
+	<select id="getCommentCount" resultMap="moviecount"
+		parameterType="map">
+		SELECT * FROM(
+		SELECT ROWNUM NUM, m.*
+		FROM (SELECT * FROM
+		COMMENT_REPORT cr INNER JOIN EUTCHA_COMMENT ec ON cr.fk_comment_index
+		= ec.comment_index WHERE ec.comment_index = ${commentno}
+		) m
+		)
+
+	</select>
+	<update id="setBlindOn">
+		UPDATE EUTCHA_COMMENT SET COMMENT_BLIND_CHECK = 1
+		WHERE COMMENT_INDEX =
+		${commentno}
+	</update>
+	<select id="getYesBlind" resultMap="noblind" parameterType="map">
+		SELECT * FROM(
+		SELECT ROWNUM NUM, m.*
+		FROM (SELECT
+		ec.comment_index,
+		ec.fk_star_index,
+		ec.comment_text,
+		ec.comment_like_count,
+		ec.comment_report_count,
+		ec.comment_blind_check,
+		ec.comment_date,
+		sr.fk_movie_docid,
+		sr.fk_member_email,
+		sr.star_rating
+		FROM EUTCHA_COMMENT
+		ec INNER JOIN STAR_RATING sr ON ec.fk_star_index =
+		sr.star_index WHERE
+		ec.comment_blind_check = 1
+		) m
+		)
+		WHERE NUM BETWEEN
+		${page} AND ${amount}
+	</select>
+	<select id="getYesBlindCount" resultMap="moviecount"
+		parameterType="map">
+		SELECT * FROM(
+		SELECT ROWNUM NUM, m.*
+		FROM (SELECT
+		ec.comment_index,
+		ec.fk_star_index,
+		ec.comment_text,
+		ec.comment_like_count,
+		ec.comment_report_count,
+		ec.comment_blind_check,
+		ec.comment_date,
+		sr.fk_movie_docid,
+		sr.fk_member_email,
+		sr.star_rating
+		FROM EUTCHA_COMMENT ec INNER JOIN STAR_RATING sr ON ec.fk_star_index =
+		sr.star_index WHERE ec.comment_blind_check = 1
+		) m
+		)
+	</select>
+	<update id="setBlindOff">
+		UPDATE EUTCHA_COMMENT SET COMMENT_BLIND_CHECK = 0
+		WHERE COMMENT_INDEX =
+		${commentindex}
+	</update>
+	<update id="updateMovieInfo">
+		UPDATE MOVIE_INFO SET TITLE = #{title},
+		TITLE_ORG =
+		#{titleorg},
+		NATION = #{nation}, MOVIE_RUNNING_TIME = #{runningtime},
+		RATING = #{rating},
+		PRODYEAR = #{prodyear}, POSTER_URI = #{posteruri},
+		GENRE = #{genre},
+		PLOT = #{plot}, MOVIE_TRAILER = #{traileruri} WHERE
+		MOVIE_DOCID = #{docid}
+	</update>
+	<delete id="deleteMovieInfo">
+		DELETE FROM MOVIE_INFO WHERE MOVIE_DOCID = #{docid}
+	</delete>
+	<select id="getMemberInfo" resultMap="memberdash"
+		parameterType="map">
+		select *
+
+		from(
+
+		select *
+
+		from MEMBER
+
+		order by MEMBER_DATE
+		DESC
+
+		)
+
+		where ROWNUM BETWEEN 1 AND 10
+	</select>
+	<select id="getMovieChart" resultMap="moviechart"
+		parameterType="map">
+		select *
+
+		from(
+
+		select *
+
+		from MOVIE_INFO
+
+		order by
+		MOVIE_HIT_COUNT DESC
+
+		)
+
+		where ROWNUM BETWEEN 1 AND 5
+	</select>
+	<select id="getMovieGoodChart" resultMap="moviegoodchart"
+		parameterType="map">
+		select *
+
+		from(
+
+		SELECT mi.title, SUM(comment_like_count)
+		FROM eutcha_comment ec
+		JOIN star_rating sr
+		ON ec.fk_star_index = sr.star_index JOIN MOVIE_INFO mi ON
+		sr.fk_movie_docid = mi.movie_docid
+		GROUP BY mi.title
+
+		)
+
+		where ROWNUM BETWEEN 1 AND 5
+	</select>
+	
+
+
+
+</mapper>

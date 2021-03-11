@@ -1,0 +1,120 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap");
+
+.main-title {
+  font-size: 2.5rem;
+  color: rgb(151, 150, 151);
+  letter-spacing: -0.1rem;
+  border-bottom: 1px solid rgb(223, 219, 219);
+}
+
+.title-div {
+  padding-top: 20px;
+  padding-left: 40px;
+  padding-bottom: 20px;
+}
+
+.atag {
+  text-decoration: none !important;
+  color: rgb(151, 150, 151);
+}
+
+.atag:hover {
+  color: rgb(151, 150, 151);
+}
+
+.bodytitle {
+  text-align: center;
+  letter-spacing: 1rem;
+}
+
+.mybody-wrapper {
+  border-radius: 10px;
+  margin: 70px 25% 0 25%;
+  display: block;
+  width: 900px;
+  height: 650px;
+  background-color:  rgb(70, 75, 87);
+  /* background-color: rgb(16, 16, 31); */
+  border: 10px double rgb(70, 75, 87);
+  text-align: center;
+  font-family: "Noto Sans KR", sans-serif;
+  margin-bottom: 100px;
+}
+
+#complainbox {
+  padding: 10px;
+  border-radius: 10px;
+  color: white;
+  margin: 30px 25% 0 25%;
+  text-align: left;
+  /* background-color: rgb(204, 142, 163); */
+  background-color: rgb(255,7,88);
+  border : 3px solid white;
+  width: 450px;
+  height: 160px;
+  display: block;
+  margin-bottom: 20px;
+}
+
+.body-header {
+  font-size: 1.2rem;
+  padding-top: 50px;
+}
+
+#inputdiv {
+  border-radius: 10px;
+  width: 300px;
+  height: 50px;
+  padding: 20px;
+  font-size: 1.5rem;
+  text-align: center;
+  color: rgb(70, 75, 87);
+  border: 0;
+  background-color: white;
+  border: 3px solid rgb(70, 75, 87);
+  cursor: pointer;
+}
+
+.ment {
+  font-weight: bold;
+  color: white;
+}
+
+#ment2 {
+  color: rgb(151, 150, 151);
+}
+
+#inputdiv2 {
+  margin-top: 30px;
+  border-radius: 10px;
+  width: 300px;
+  height: 50px;
+  text-align: center;
+  font-size: 1.5rem;
+  color: rgb(255, 255, 255);
+  border: 3px solid rgb(70, 75, 87);
+  background-color: rgb(87, 86, 86);
+}
+
+#inputdiv2:hover {
+  background-color: black;
+  transition: 0.5s;
+}
+
+#complain-check {
+  margin-left: 20px;
+}
+
+#reason {
+  font-size: 1.2rem;
+}
+
+.logosize {
+	margin-left : 30px;
+}
+
+
+#info {
+	display : none;
+	color : red;
+}

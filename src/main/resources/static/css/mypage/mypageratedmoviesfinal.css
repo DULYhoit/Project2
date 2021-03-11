@@ -1,0 +1,191 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap");
+
+.mybody-wrapper {
+margin-left : 30px;
+  height: 450%;
+  /* height �빟媛� �븷留ㅽ븿.... �뜲�씠�꽣 留롮씠 吏묒뼱�꽔怨� �떎�떆 �솗�씤�빐蹂쇨쾬.. */
+  font-family: "Noto Sans KR", sans-serif;
+}
+.title {
+  margin-left: 20px;
+  font-size: 1.4em;
+  font-weight: 600;
+  border-bottom: 1px solid rgb(194, 194, 194); 
+  line-height: 3em;
+}
+
+.moviewrapper {
+  margin-left: 25px;
+  display: inline-block; 
+ /*  float:left; */
+  
+}
+.title-sub {
+  margin-left: 20px;
+  font-size: 1.2rem;
+  font-weight: 600;
+  /* border-bottom: 1px solid rgb(194, 194, 194); */
+  line-height: 3em;
+}
+
+
+.movie-div {
+  float: left;
+}
+
+#modal-div {
+  width: 370px;
+  height: 500px;
+  font-size: 1rem;
+  line-height: 3rem;
+  color: gray;
+}
+
+#sorttext {
+  border-bottom: 1px solid rgb(221, 217, 217);
+}
+.sortwrapper {
+  margin-top: 20px;
+}
+.sortbtn {
+  margin-left: 20px;
+}
+#sorttext:hover {
+  font-weight: bolder;
+}
+
+#modal-header {
+  display: block;
+}
+#modal-title {
+  text-align: center;
+  color: black;
+}
+
+#xbtn {
+  color: rgb(255, 7, 88);
+  font-weight: bolder;
+}
+
+.tabui {
+  list-style: none;
+  margin: 0px;
+  display: flex;
+  align-items: flex-end;
+  background: rgb(255, 255, 255);
+  box-sizing: border-box;
+  width: 100%;
+  height: 48px;
+  padding: 0px 16px;
+}
+
+.listyle {
+  display: inline-flex;
+  -webkit-box-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  align-items: center;
+  font-size: 15px;
+  font-weight: 500;
+  letter-spacing: -0.5px;
+  line-height: 20px;
+  min-width: 48px;
+  height: 44px;
+  color: rgb(255, 47, 110);
+  border-bottom: 3px solid rgb(255, 47, 110);
+  cursor: pointer;
+  box-sizing: border-box;
+  width: 50%;
+  max-width: 150px;
+}
+
+.listyle2 {
+  max-width: 150px;
+  display: inline-flex;
+  -webkit-box-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  align-items: center;
+  color: rgb(120, 120, 120);
+  font-size: 15px;
+  font-weight: 400;
+  letter-spacing: -0.5px;
+  line-height: 20px;
+  min-width: 48px;
+  height: 44px;
+  padding: 0px 0px 3px;
+  cursor: pointer;
+  box-sizing: border-box;
+  width: 50%;
+}
+
+.dividestar {
+  padding-bottom: 30px;
+  border-bottom: 1px solid rgb(228, 223, 223);
+}
+
+.tabone {
+  display: block;
+}
+.tabtwo {
+  display: none;
+}
+
+.starcount {
+  font-size: 1rem;
+  color: rgb(181, 177, 177);
+}
+
+.starallview {
+  text-decoration: none !important;
+  font-size: 1rem;
+  font-weight: lighter;
+  color: rgb(255, 7, 88);
+  margin-left: 1550px;
+}
+
+.starallview:hover {
+  color: rgb(255, 7, 88);
+  font-weight: bold;
+}
+
+.movietitle{
+	margin-top:3px;
+	max-height: 20px;
+	width : 140px;
+	display : inline-block;
+	color: black;
+	font-size: 0.9rem;
+	font-weight:500;
+	overflow:hidden;
+	text-overflow:ellipsis;
+}
+
+.movie-div {
+	width: 150px;  
+	height:200px;
+	margin-bottom: 50px;
+}
+
+.poster {
+	border-radius: 5px;
+}
+
+
+.search {
+	margin : 0 72px 0 auto;
+	
+}
+
+#search {
+	height : 35px;
+	border :1px solid #D8D8D8;
+	background-color: white;
+	
+}
+.sbtn {
+	height : 35px;
+	border :1px solid rgb(255,7,88);
+	background-color: rgb(255,7,88) !important;
+	color: white;
+}

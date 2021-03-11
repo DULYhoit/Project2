@@ -1,0 +1,330 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap');
+
+* {
+    font-family: 'Noto Sans KR', sans-serif;
+    text-decoration: none;
+    margin-block-start: 0;
+    margin-block-end: 0;
+    padding-inline-start: 0;
+    margin-bottom: 0;
+}
+
+body,
+html {
+    outline: none;
+    border-style: none;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+    scroll-behavior: smooth;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    font-family: 'Noto Sans KR', sans-serif;
+}
+
+a:link,
+a {
+    line-height: normal;
+    outline: none;
+    text-decoration: none;
+}
+
+dl,ol,ul,li,p,h4 {
+
+    list-style-type: none;
+    margin-block-start: 0;
+    margin-block-end: 0;
+    padding-inline-start: 0;
+    margin-top: 0;
+    margin-bottom: 0;
+    line-height: 0;
+}
+
+main {
+
+	padding: 7% 0;
+    width: 1280px;
+    margin: 0 auto;
+}
+
+.slider_container {
+    position: relative;
+    /* display: inline-grid; */
+    margin: 0 auto;
+    max-width: 1200px;
+    height: 1000px;
+
+}
+
+.slider_title {
+    letter-spacing: -0.4px;
+    line-height: 30px;
+    margin: 12px 0;
+    margin-left: 20px;
+    color: rgb(51, 51, 51);
+    font-size: 22px;
+    font-weight: 900;
+    display: inline-block;
+
+}
+
+
+/* slider */
+
+
+.movie_slider button {
+    position: absolute;
+    display: flex;
+    z-index: 10;
+    /* top: 40%; */
+    top: 140px;
+    transform: translateY(-50%);
+    width: 30px;
+    height: 30px;
+    border-radius: 100%;
+    border: none;
+    background-color: rgba(255, 255, 255, 0.5);
+
+
+}
+
+.movie_slider .slick-prev {
+    left: 5px;
+    font-size: 0;
+    color: transparent;
+}
+
+.movie_slider .slick-prev:before {
+    content: "\e93d";
+
+}
+
+.movie_slider .slick-next {
+    right: 12px;
+    font-size: 0;
+    color: transparent;
+}
+
+.movie_slider button:before {
+    font-family: "xeicon";
+    /* color: rgb(51, 51, 51); */
+    color: rgba(0, 0, 0, 0.90);
+    ;
+    font-weight: bold;
+    font-size: 21px;
+    margin-left: 5px;
+}
+
+.movie_slider .slick-next:before {
+    content: "\e940";
+}
+
+
+.movie_slider {
+
+    height: 340px;
+    display: inline-block;
+    position: flex;
+    justify-content: space-around;
+    overflow: hidden;
+    border-radius: 5px;
+
+}
+
+.slick-slider {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding-left: 20px;
+    margin: auto;
+}
+
+/*-----------------*/
+.movie_box {
+    float: left;
+    position: relative;
+    width: 200px;
+    /* height: 400px; */
+    margin-left: 3px;
+    outline: none;
+    border-style: none;
+    box-sizing: border-box;
+    text-decoration: none;
+
+}
+
+.poster .movie_img {
+    /* margin-top: -5px; */
+    vertical-align: top;
+    width: 200px;
+    height: 250px;
+    opacity: 1;
+    object-fit: cover;
+    vertical-align: top;
+    border: 1px solid none;
+    box-sizing: border-box;
+    border-radius: 5px;
+    box-sizing: border-box;
+    border: 1px outset #e9e4e4;
+}
+
+.poster .rank {
+    margin-top: 5px;
+    position: absolute;
+    top: 3px;
+    left: 10px;
+    width: 25px;
+    height: 25px;
+    /* line-height: 50px; */
+    background-color: rgba(0, 0, 0, 0.70);
+    text-align: center;
+    opacity: 1;
+    border-radius: 4px;
+    text-align: center;
+    color: rgb(255, 255, 255);
+    font-weight: bold;
+    letter-spacing: normal;
+}
+
+.movie_title {
+    letter-spacing: -0.4px;
+    color: #292a32;
+    font-size: 15px;
+    font-weight: 600;
+    margin: 5px 0;
+    
+	/*텍스트 글자줄임 추가 */
+	overflow:hidden;
+	white-space:nowrap;
+	text-overflow:ellipsis;	
+}
+
+.movie_info {
+
+    font-size: 13px;
+    color: #74747b;
+    line-height: 3px;
+    letter-spacing: -0.3px;
+    /* overflow: hidden; */
+    font-weight: 500;
+
+}
+
+.movie_info span {
+    padding: 0 5px;
+}
+
+
+.main_slider {
+    position: relative;
+    /* display: inline-grid;  */
+    display: inline-block;
+    margin: auto;
+    margin-left: 25px;
+    max-width: 1200px;
+    justify-content: space-around;
+
+}
+
+.poster {
+
+    /* position: relative; */
+    width: 200px;
+    height: 320px;
+    /* margin: 0 10px;  */
+    display: inline-block;
+    /* background-color: palevioletred; */
+    outline: none;
+    border-radius: 5px;
+    text-decoration: none;
+
+}
+
+/*----------컬렉션-------------*/
+
+.photo_list {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 200px;
+    height: 250px;
+    background-color: transparent;
+    background-color: rgba(230, 223, 223, 0.349);
+    border-radius: 2px;
+}
+
+
+.photo_box .photo-img {
+    width: 100px;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    object-fit: cover;
+    box-sizing: border-box;
+    border: 1px outset #e9e4e4;
+    border-radius: 5px;
+
+}
+
+.collection_title {
+    padding-top: 30px;
+    text-decoration: none;
+    letter-spacing: -0.4px;
+    color: #292a32;
+    font-size: 16px;
+    font-weight: 700;
+}
+
+.movie_box a:link {
+    text-decoration: none;
+}
+
+
+
+/*스크롤 */
+a#MOVE_TOP_BTN {
+    position: fixed;
+    right: 2%;
+    bottom: 50px;
+    display: none;
+    z-index: 999;
+    
+}
+
+#up{
+  font-size: 30px;
+  color: RGB(255, 7, 88);
+}
+
+
+
+@media screen and (max-width: 780px) {
+
+    main{
+        padding: 100px;
+
+    }
+
+
+    .movie_slider {
+        position: relative;
+        display: inline-block;
+        /* max-width: 730px; */
+        width: 100%;
+        overflow: hidden;
+    }
+    
+    .movie_box .movie_info{
+        line-height: 0.5px;
+        text-overflow: ellipsis;
+        font-size: 13px;
+        overflow: hidden;
+    }
+
+  }

@@ -1,0 +1,271 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE mapper
+	PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+	"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper
+	namespace="kr.or.eutchapedia.movie.detail.repository.MovieDetailMapper">
+
+	<!-- 영화정보 select -->
+	<select id="selectMovieInfo" resultMap="movieInfo"
+		parameterType="String">
+
+		SELECT * FROM movie_info
+		WHERE movie_docid =
+		#{_parameter}
+
+	</select>
+
+	<!-- staff 정보 select -->
+	<select id="selectStaffList" resultMap="staffInfo"
+		parameterType="String">
+		SELECT * FROM staffs_info
+		WHERE fk_movie_docid =
+		#{_parameter}
+		ORDER BY staff_index ASC
+	</select>
+
+
+	<select id="selectStaffFilmo" resultMap="staffFilmo"
+		parameterType="String">
+		SELECT m.title, m.prodyear, s.staff_name,
+		s.staff_role_group,
+		m.movie_docid, m.poster_uri, s.staff_id
+		FROM
+		staffs_info s
+		JOIN movie_info m
+		ON
+		s.fk_movie_docid = m.movie_docid
+		WHERE
+		s.staff_id = #{_parameter}
+		ORDER
+		BY m.prodyear DESC
+
+	</select>
+
+	<update id="updateHitCount" parameterType="String">
+		UPDATE movie_info
+		SET
+		movie_hit_count = movie_hit_count + 1
+		WHERE movie_docid = #{_parameter}
+	</update>
+
+	<!-- 평균 별점, 사용자 명수 -->
+	<select id="selectStarAvg" parameterType="String"
+		resultType="HashMap">
+		SELECT TRUNC(AVG(star_rating), 1) staravg, COUNT(*) starcnt
+		FROM star_rating
+		WHERE fk_movie_docid = #{_parameter}
+	</select>
+
+	<!-- 차트를 위한 쿼리문 -->
+	<select id="selectStarData" parameterType="String"
+		resultType="HashMap">
+		SELECT star_rating stardata, COUNT(star_rating) cnt
+		FROM
+		star_rating
+		WHERE fk_movie_docid = #{_parameter}
+		GROUP BY star_rating
+		ORDER BY star_rating ASC
+	</select>
+
+	<!-- 코멘트 상위 3개 출력 -->
+	<select id="selectComments" parameterType="String"
+		resultType="HashMap">
+		SELECT sr.fk_movie_docid movieid, m.member_nickname nickname,
+		m.member_photo photo, ec.comment_index commentIndex,
+		ec.comment_text
+		text, ec.comment_like_count likecount, ec.comment_date commentdate,
+		sr.star_rating stars
+		FROM eutcha_comment ec
+		INNER JOIN star_rating sr
+		ON
+		ec.fk_star_index = sr.star_index
+		INNER JOIN
+		member m
+		ON
+		sr.fk_member_email = m.member_email
+		WHERE sr.fk_movie_docid
+		=
+		#{_parameter}
+		<![CDATA[AND ROWNUM < 4]]>
+		AND comment_blind_check = '0'
+		ORDER BY comment_like_count DESC,
+		comment_date DESC
+	</select>
+
+	<!-- 보고싶어요 누른 적 있는지 체크 -->
+	<select id="selectWannaWatch" parameterType="HashMap"
+		resultType="int">
+		SELECT COUNT(*)
+		FROM wanna_watch
+		WHERE fk_movie_docid =
+		#{movieDocId}
+		AND fk_member_email =
+		#{memberEmail}
+
+
+	</select>
+
+	<!-- 별점 데이터 체크 -->
+	<select id="checkRatedStars" parameterType="HashMap"
+		resultMap="starRating">
+		SELECT star_index, star_rating
+		FROM star_rating
+		WHERE
+		fk_movie_docid = #{movieDocId}
+		AND fk_member_email =
+		#{memberEmail}
+	</select>
+
+	<!-- 코멘트 데이터 체크 -->
+	<select id="checkCommentData" parameterType="HashMap"
+		resultMap="commentVo">
+		SELECT ec.comment_index, ec.comment_text
+		FROM star_rating sr
+		JOIN eutcha_comment ec
+		ON sr.star_index = ec.fk_star_index
+		WHERE
+		sr.fk_member_email = #{memberEmail}
+		AND sr.fk_movie_docid =
+		#{movieDocId}
+
+	</select>
+
+	<!-- moviedocid 넘겨서 컬렉션 가져오기 -->
+	<select id="selectCollectionInfo" parameterType="Integer"
+		resultMap="collectionVo">
+		SELECT p.pick_name, p.pick_index, mi.movie_docid, mi.title,
+		mi.prodyear,
+		mi.nation, mi.poster_uri FROM movie_pick mp
+		JOIN movie_info
+		mi
+		ON mp.fk_movie_docid = mi.movie_docid
+		JOIN pick p
+		ON p.pick_index =
+		mp.fk_pick_index
+		WHERE fk_pick_index = #{_parameter}
+
+	</select>
+
+
+	<!-- 컬렉션 번호만 따로 가져오기 -->
+	<select id="selectCollectionIndex" parameterType="String"
+		resultType="Integer">
+		SELECT p.pick_index
+		FROM pick p
+		JOIN movie_pick mp
+		ON
+		p.pick_index = mp.fk_pick_index
+		WHERE fk_movie_docid = #{_parameter}
+
+	</select>
+
+	<select id="selectLikeData" parameterType="HashMap"
+		resultMap="commentLikeVo">
+		SELECT * FROM
+		(SELECT * FROM comment_like
+		WHERE fk_comment_index IN
+		(SELECT ec.comment_index FROM star_rating sr
+		JOIN eutcha_comment ec
+		ON sr.star_index = ec.fk_star_index
+		WHERE sr.fk_movie_docid = #{movieDocId}))
+		where fk_member_email = #{memberEmail}
+
+	</select>
+	
+	<select id="selectMemberNickname" parameterType="String" resultType="String">
+		SELECT member_nickname 
+		FROM member
+		WHERE member_email = #{_parameter}
+		
+	</select>
+	
+	
+	
+	<!-- resultmap -->
+
+	<resultMap
+		type="kr.or.eutchapedia.movie.detail.domain.MovieInfoVo"
+		id="movieInfo">
+		<result column="movie_docid" property="movieDocId" />
+		<result column="title" property="title" />
+		<result column="title_org" property="titleOrg" />
+		<result column="nation" property="nation" />
+		<result column="movie_running_time" property="movieRunningTime" />
+		<result column="rating" property="rating" />
+		<result column="prodyear" property="prodYear" />
+		<result column="poster_uri" property="posterUri" />
+		<result column="genre" property="genre" />
+		<result column="plot" property="plot" />
+		<result column="movie_trailer" property="movieTrailer" />
+		<result column="movie_hit_count" property="movieHitCount" />
+
+	</resultMap>
+
+	<resultMap
+		type="kr.or.eutchapedia.movie.detail.domain.StaffInfoVo"
+		id="staffInfo">
+		<result column="staff_index" property="staffIndex" />
+		<result column="fk_movie_docid" property="movieDocId" />
+		<result column="staff_name" property="staffName" />
+		<result column="staff_role_group" property="staffRoleGroup" />
+		<result column="staff_role" property="staffRole" />
+		<result column="staff_id" property="staffId" />
+	</resultMap>
+
+	<resultMap
+		type="kr.or.eutchapedia.movie.detail.domain.StaffFilmoVo"
+		id="staffFilmo">
+		<result column="title" property="title" />
+		<result column="prodyear" property="prodYear" />
+		<result column="staff_name" property="staffName" />
+		<result column="staff_role_group" property="staffRoleGroup" />
+		<result column="movie_docid" property="movieDocId" />
+		<result column="poster_uri" property="posterUri" />
+		<result column="staff_id" property="staffId" />
+	</resultMap>
+
+	<resultMap
+		type="kr.or.eutchapedia.movie.detail.domain.StarRatingVo"
+		id="starRating">
+		<result column="star_index" property="starIndex" />
+		<result column="fk_movie_docid" property="movieDocId" />
+		<result column="fk_member_email" property="memberEmail" />
+	</resultMap>
+
+	<resultMap
+		type="kr.or.eutchapedia.movie.detail.domain.CommentVo" id="commentVo">
+		<result column="comment_index" property="commentIndex" />
+		<result column="fk_star_index" property="starIndex" />
+		<result column="comment_text" property="commentText" />
+		<result column="comment_like_count" property="commentLikeCount" />
+		<result column="comment_report_count"
+			property="commentReportCount" />
+		<result column="comment_blind_check"
+			property="commentBlindCheck" />
+		<result column="comment_date" property="commentDate" />
+
+	</resultMap>
+
+	<resultMap id="collectionVo"
+		type="kr.or.eutchapedia.movie.collection.domain.CollectionVo">
+		<result column="pick_name" property="pickName" />
+		<result column="pick_index" property="pickIndex" />
+		<result column="movie_docid" property="movieDocId" />
+		<result column="title" property="title" />
+		<result column="prodyear" property="prodYear" />
+		<result column="nation" property="nation" />
+		<result column="poster_uri" property="posterUri" />
+	</resultMap>
+
+	<resultMap id="commentLikeVo"
+		type="kr.or.eutchapedia.movie.detail.domain.CommentLikeVo">
+		<result column="like_index" property="likeIndex" />
+		<result column="fk_comment_index" property="commentIndex" />
+		<result column="fk_member_email" property="memberEmail" />
+		<result column="like_check" property="likeCheck" />
+	</resultMap>
+
+</mapper>

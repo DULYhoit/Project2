@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+	PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+	"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper
+	namespace="kr.or.eutchapedia.movie.detail.repository.StarRatingMapper">
+
+	<!-- 별점 남긴 적 있는지 확인 -->
+	<select id="checkRatedStars"
+		parameterType="kr.or.eutchapedia.movie.detail.domain.StarRatingVo"
+		resultType="int">
+		SELECT COUNT(*)
+		FROM star_rating
+		WHERE fk_member_email = #{memberEmail}
+		AND fk_movie_docid = #{movieDocId}
+	</select>
+
+	<!-- insert할 때 starIndex 가져오기 -->
+	<select id="getStarIndex" parameterType="kr.or.eutchapedia.movie.detail.domain.StarRatingVo"
+		resultType="int">
+		SELECT star_index
+		FROM star_rating
+		WHERE fk_member_email = #{memberEmail}
+		AND fk_movie_docid = #{movieDocId}
+	</select>
+	<insert id="rateStars"
+		parameterType="kr.or.eutchapedia.movie.detail.domain.StarRatingVo">
+		INSERT INTO star_rating VALUES(
+		seq_star_rating.nextval,
+		#{movieDocId},
+		#{memberEmail},
+		#{starRating}
+		)
+	</insert>
+
+	<delete id="cancelRatedStars"
+		parameterType="kr.or.eutchapedia.movie.detail.domain.StarRatingVo">
+		DELETE star_rating
+		WHERE fk_member_email = #{memberEmail}
+		AND fk_movie_docid = #{movieDocId}
+	</delete>
+</mapper>

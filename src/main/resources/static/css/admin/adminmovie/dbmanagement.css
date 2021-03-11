@@ -1,0 +1,69 @@
+#pick-h1{
+    text-align: center;
+    margin-top: 25px;
+}
+#dbmanagement-search-container{
+    float: right;
+    margin-top: 20px;
+}
+#dbmanagement-input-tag{
+    display: inline-block;
+
+    
+}
+#dbmanagement-input-text{
+    display: inline-block;
+      
+  
+}
+#dbmanagement-input-data{
+    text-align: center;
+}
+
+
+
+#dbmanagement-select-button{
+    margin-bottom:9px;
+}
+
+#dbmanagement-select-search{
+    margin-bottom: 9px;
+    width: 110px
+}
+
+#dbmanagement-mtext{
+    width: 250px;
+}
+#dbmanagement-btn-click{
+    display: inline-block;
+}
+#dbmanagement-input-data{
+    margin-top: 120px;
+    
+}
+#dbmanagement-input-data > table{
+    background-color: white;
+    border: 2px solid #dcdcdc;
+}
+#dbmanagement-del-one{
+    float: left;
+    margin-left: 30px;
+    margin-top: 20px;
+}
+#dbmanagement-del-all{
+    float: right;
+    margin-right: 30px;
+    margin-top: 20px;
+}
+#dbmanagement-data-page{
+    width: 35%;
+    text-align:center;
+    margin-left: auto;
+    margin-right: auto;
+}
+#dbmanagement-pagiedit > li > a{
+	    padding: .5rem .60rem;
+}
+#dbmanagement-input-data > :last-child{
+cursor: pointer;
+}

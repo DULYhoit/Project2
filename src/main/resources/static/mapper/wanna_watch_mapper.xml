@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+	PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+	"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper
+	namespace="kr.or.eutchapedia.movie.detail.repository.WannaWatchMapper">
+
+	<!-- 보고싶어요 누른 적 있는지 체크 -->
+	<select id="selectWannaWatch" parameterType="HashMap"
+		resultType="int">
+		SELECT COUNT(*)
+		FROM wanna_watch
+		WHERE fk_movie_docid = #{movieDocId}
+		AND fk_member_email =
+		#{memberEmail}
+
+
+	</select>
+
+	<insert id="addToWannaWatch"
+		parameterType="kr.or.eutchapedia.movie.detail.domain.WannaWatchVo">
+		INSERT INTO wanna_watch VALUES(
+		seq_wanna_watch_index.nextval,
+		#{memberEmail},
+		#{movieDocId},
+		SYSDATE
+		)
+
+	</insert>
+	
+	<delete id="removeWannaWatch" parameterType="kr.or.eutchapedia.movie.detail.domain.WannaWatchVo">
+		DELETE FROM wanna_watch
+		WHERE fk_member_email = #{memberEmail}
+		AND fk_movie_docid = #{movieDocId}
+	</delete>
+</mapper>

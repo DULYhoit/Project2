@@ -1,0 +1,300 @@
+@charset "UTF-8";
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/******************* 코멘트 관리 ********************/
+
+.mypage_comment {
+    padding-top: 100px;
+    width: 80%;
+    margin: 0 auto;
+    position: relative;
+}
+
+.my_comment_wrap {
+    height: auto !important;
+    padding: 40px 30px;
+    background: #fff;
+    font-size: 14px;
+}
+
+.my_comment_wrap .myq_title_section {
+    margin: 0 -30px 45px;
+    padding: 0 30px 30px;
+    position: relative;
+    border-bottom: 1px solid #666;
+}
+
+.my_comment_wrap .myq_title_section h3 {
+    color: #000;
+    font-size: 28px;
+    line-height: 1;
+    font-weight: bold;
+}
+
+.my_comment_wrap .myq_title_section .myq_noti_list {
+    margin-top: 20px;
+}
+
+.my_comment_wrap .myq_title_section .myq_noti_list li {
+    margin-top: 1px;
+    padding-left: 20px;
+    background: url(/img/mypage/free-icon-check-1828743.svg) left 7px no-repeat !important;
+    color: #555;
+}
+
+.my_comment_wrap .myq_service {
+    overflow: hidden;
+    height: 1%;
+    margin: 39px 0 10px;
+}
+
+.myq_service p {
+    float: left;
+    color: #000;
+    font-size: 16px;
+}
+
+.myq_service select {
+    float: right;
+}
+
+.myq_service .myq_list_option {
+    border: 1px solid #bbb;
+    color: #666;
+    font-size: 11px;
+    height: 20px;
+    outline-style: none;
+    vertical-align: middle;
+    font-weight: normal;
+}
+
+.mypage_comment .table tr {
+    cursor: pointer;
+}
+
+.mypage_comment .table .myq_item_content {
+    max-width: 600px;
+    
+}
+
+.myq_item_content {
+    position: relative;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+/********************* 나의 문의 ***********************/
+.mypage_content {
+    padding-top: 72px;
+    width: 80%;
+    margin: 0 auto;
+    position: relative;
+}
+
+.myq_wrap {
+    height: auto !important;
+    padding: 40px 30px;
+    border-top: 2px solid #555;
+    background: #fff;
+    font-size: 14px;
+}
+
+.myq_wrap .myq_title_section {
+    margin: 0 -30px 45px;
+    padding: 0 30px 30px;
+    position: relative;
+}
+
+.myq_wrap .myq_title_section h3 {
+    color: #000;
+    font-size: 28px;
+    line-height: 1;
+    font-weight: bold;
+}
+
+.myq_wrap .myq_title_section .myq_noti_list {
+    margin-top: 20px;
+}
+
+.myq_wrap .myq_title_section .myq_noti_list li {
+    margin-top: 1px;
+    padding-left: 20px;
+    background: url(/img/mypage/free-icon-check-1828743.svg) left 7px no-repeat !important;
+    color: #555;
+}
+
+.myq_section .myq_service {
+    overflow: hidden;
+    height: 1%;
+    margin: 39px 0 10px;
+}
+
+.myq_service p {
+    float: left;
+    color: #000;
+    font-size: 16px;
+}
+
+.myq_section .myq_item_list {
+    margin: 0;
+    border-top: 1px solid #000;
+}
+
+.my_item {
+    overflow: hidden;
+    padding: 30px 0;
+    border-bottom: 1px solid #ddd;
+    text-align: left;
+}
+
+.my_item .qna_list_block {
+    overflow: hidden;
+    padding: 25px 30px;
+    min-height: 130px;
+    height: auto !important;
+    background: #fafafa;
+}
+
+.qna_list_block .question_block,
+.qna_list_block .answer_block {
+    overflow: hidden;
+}
+
+.qna_list_block .question_block {
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+    display: block;
+    border-bottom: 0;
+}
+
+.my_item .qna_list_block .title_img {
+    width: 60px;
+    text-align: left;
+}
+
+.qna_list_block .title_img,
+.qna_list_block .acc_block {
+    float: left;
+}
+
+.my_item .qna_list_block .acc_block {
+    color: #444;
+    padding: 0 0 0 0;
+}
+
+.qna_list_block .acc_block .btnArea {
+    padding-top: 12px;
+}
+
+.myButton {
+    box-shadow:inset 0px 1px 0px 0px #ffffff;
+    background:linear-gradient(to bottom, #f9f9f9 5%, #e9e9e9 100%);
+    background-color:#f9f9f9;
+    border-radius:6px;
+    border:1px solid #dcdcdc;
+    display:inline-block;
+    cursor:pointer;
+    color:#666666;
+    font-family:Arial;
+    font-size:11px;
+    font-weight:bold;
+    padding:5px 10px;
+    text-shadow:0px 1px 0px #ffffff;
+}
+.myButton:hover {
+    background:linear-gradient(to bottom, #e9e9e9 5%, #f9f9f9 100%);
+    background-color:#e9e9e9;
+}
+.myButton:active {
+    position:relative;
+    top:1px;
+}
+
+.btnArea a {
+    text-decoration: none;
+}
+
+
+.qna_list_block .answer_block {
+    margin-top: 25px;
+    padding-top: 25px;
+    border-top: 1px solid #ddd;
+}
+
+/********************* 페이징 *********************/
+.pagination_section {
+    display: block;
+    text-align: center;
+}
+
+.pagination_section .custom_pagination {
+    margin-top: 35px;
+}
+
+.custom_pagination {
+    display: inline-block;
+    position: relative;
+    padding: 0 50px;
+    text-align: center;
+    line-height: 22px;
+    vertical-align: top;
+}
+
+.custom_pagination a {
+    outline: none;
+    text-decoration: none;
+}
+
+.custom_pagination .pagination_prev {
+    position: absolute;
+    left: 0;
+    margin: -11px 10px 0;
+}
+
+.custom_pagination .pagination_next {
+    position: absolute;
+    right: 0;
+    margin: -11px 10px 0;
+}
+
+.custom_pagination .pagination_prev,
+.custom_pagination .pagination_next {
+    display: inline-block;
+    width: 22px;
+    margin: 0 10px;
+    height: 22px;
+    vertical-align: top;
+}
+
+.custom_pagination .current {
+    font-weight: 700;
+    color: #000;
+}
+
+.custom_pagination .current, 
+.custom_pagination .pagenum a {
+    display: inline-block;
+    min-width: 10px;
+    padding: 0 5px;
+    font-size: 16px;
+}
+
+.custom_pagination .current span {
+    border-bottom: 1px solid #333;
+}
+
+.custom_pagination .pagenum a {
+    font-weight: 300;
+    color: #d4d4d4;
+    cursor: pointer;
+}
+
+svg:not(:root) {
+    overflow: hidden;
+}

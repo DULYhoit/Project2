@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="kr.or.eutchapedia.board.dao.FaqDao">
+	
+	<resultMap type="kr.or.eutchapedia.board.entity.Faq" id="Faq">
+		<result property="faqNo" column="FAQ_NO"></result>
+		<result property="memberEmail" column="MEMBER_EAMIL"></result>
+		<result property="faqTitle" column="FAQ_TITLE"></result>
+		<result property="faqContent" column="FAQ_CONTENT"></result>
+		<result property="faqPub" column="FAQ_PUB"></result>
+		<result property="faqFiles" column="FAQ_FILES"></result>
+		<result property="faqRegdate" column="FAQ_REGDATE"></result>
+	</resultMap>
+	<select id="getViewList" resultType="kr.or.eutchapedia.board.entity.FaqView">
+		select * from (
+			select rownum num , F.* 
+			from (select * from FAQ_VIEW 
+        	where ${field} like '%${query}%' 
+        	order by FAQ_REGDATE desc) F 
+        	) 
+        where num between #{offset} and #{size}
+	</select>
+	<select id="getViewPubList" resultType="kr.or.eutchapedia.board.entity.FaqView">
+		select * from (
+			select rownum num , F.* 
+			from (select * from FAQ_VIEW 
+        	where ${field} like '%${query}%' 
+        	order by FAQ_REGDATE desc) F 
+        	) 
+        where FAQ_PUB=1 and num between ${offset} and #{size}
+	</select>
+	<select id="getCount" resultType="int">
+		select count(FAQ_NO) count from (
+				select rownum num, F.* 
+				from (SELECT * FROM FAQ
+    		where ${field} like '%${query}%' order by FAQ_REGDATE desc) F
+			)
+		
+	</select>
+	<select id="getView" resultType="kr.or.eutchapedia.board.entity.FaqView">
+		select * from FAQ 
+        where FAQ_NO = #{faqNo}
+	</select>
+	<select id="detail" parameterType="int" resultType="kr.or.eutchapedia.board.entity.Faq">
+		select 
+			* 
+			from FAQ
+			where 
+				FAQ_NO = ${faqNo}
+	</select>
+	<update id="update" parameterType="kr.or.eutchapedia.board.entity.Faq">
+		update FAQ
+				set
+					FAQ_TITLE = #{faqTitle} 
+					,FAQ_CONTENT = #{faqContent} 
+					,FAQ_FILES = #{faqFiles, jdbcType=NVARCHAR}
+					,FAQ_PUB = #{faqPub}
+				where 
+					FAQ_NO = #{faqNo}
+	</update>
+	<insert id="insert" parameterType="kr.or.eutchapedia.board.entity.Faq">
+		insert into FAQ(
+			member_email
+			,FAQ_TITLE
+			,FAQ_CONTENT
+			,FAQ_PUB
+			,FAQ_FILES
+			
+		) values (
+			 'admin@admin.com'
+			,#{faqTitle}
+            ,#{faqContent}
+			,#{faqPub}
+			,#{faqFiles, jdbcType=NVARCHAR}
+			
+		)
+	</insert>
+	<delete id="delete" parameterType="int">
+		delete 
+			from FAQ 
+			where FAQ_NO = ${faqNo}
+	</delete>
+	<delete id="deleteAll" parameterType="kr.or.eutchapedia.board.entity.Faq">
+		delete from FAQ 
+		where faqNo in 
+		<foreach item="faqNos" index="index" collection="faqNos"
+		      open="(" separator="," close=")">
+		        #{faqNo}
+		</foreach>		
+	</delete>
+	<update id="updatePubAll">
+		update FAQ
+			set 
+			FAQ_PUB = #{faqPub}
+		where FAQ_NO in 
+		<foreach item="id" index="index" collection="ids"
+		      open="(" separator="," close=")">
+		        #{faqNo}
+		</foreach>		
+		<!-- update FAQ
+		set 
+			FAQ_PUB = case FAQ_NO
+						<foreach item="faqNo" collection="pubIds">
+							when #{faqNo} then 1 
+						</foreach>
+						<foreach item="faqNo" collection="closeIds">
+							when #{faqNo} then 0 
+						</foreach>
+						end
+			where FAQ_NO in (
+				<foreach item="faqNo" collection="pubIds">
+					#{faqNo}
+				</foreach>
+				, 
+				<foreach item="faqNo" collection="closeIds">
+					#{faqNo}
+				</foreach>
+				) -->
+		<!-- update FAQ
+		set 
+			FAQ_PUB = case FAQ_NO
+						when 14 then 0
+						when 15 then 0
+						when 21 then 1
+						when 22 then 1
+						end
+			where FAQ_NO in (14, 15, 21, 22) -->
+	</update>
+	
+</mapper>

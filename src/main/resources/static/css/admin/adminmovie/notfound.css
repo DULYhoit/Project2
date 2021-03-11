@@ -1,0 +1,57 @@
+#pick-h1{
+    text-align: center;
+    margin-top: 25px;
+}
+#comment-move-container{
+    text-align: center;
+}
+
+#comment-move-enrollment{
+    width: 49%;
+    height: 60px;
+    background-color: #5E5E5E;
+    display: inline-block;
+    margin-left: auto;
+    border-radius:10px;
+}
+#comment-move-enrollment > h2{
+    margin-top: 15px;
+}
+#comment-move-cancel{
+    width: 50%;
+    height: 60px;
+    background-color:#5E5E5E;
+    display: inline-block;
+    margin-right: auto;
+    border-radius:10px;
+}
+#comment-move-cancel > h2{
+    margin-top: 15px;
+}
+#notfound-input-data{
+    height: 400px;
+    background-color: white;
+    border: 2px solid #dcdcdc;
+    text-align: center;
+    
+}
+#notfound{
+    margin-top: 150px;
+    
+}
+#comment-del-one{
+    float: left;
+    margin-left: 30px;
+    margin-top: 20px;
+}
+#comment-del-all{
+    float: right;
+    margin-right: 30px;
+    margin-top: 20px;
+}
+#comment-data-page{
+    width: 216px;
+    margin-top: 70px;
+    margin-left: auto;
+    margin-right: auto;
+}

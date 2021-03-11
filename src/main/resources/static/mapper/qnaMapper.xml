@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="kr.or.eutchapedia.board.dao.QnaDAO">
+
+	<resultMap type="kr.or.eutchapedia.board.entity.QnaVO" id="QnaVO">
+		<result property="qnaNo" column="QNA_NO"></result>
+		<result property="memberEmail" column="MEMBER_EAMIL"></result>
+		<result property="qnaTitle" column="QNA_TITLE"></result>
+		<result property="qnaContent" column="QNA_CONTENT"></result>
+		<result property="qnaDate" column="QNA_REGDATE"></result>
+		<result property="qnaFilename" column="QNA_FILENAME"></result>
+		<result property="qnaFilepath" column="QNA_FILEPATH"></result>
+		<result property="aContent" column="A_CONTENT"></result>
+	</resultMap>
+	<select id="selectBoardList" parameterType="kr.or.eutchapedia.board.entity.QnaView" resultType="kr.or.eutchapedia.board.entity.QnaView">
+        SELECT 
+			*
+			FROM 
+			    QNA_VIEW
+			    ORDER BY QNA_DATE DESC
+			
+    </select>
+    
+    <insert id="insertBoard">
+    insert into QNA(
+    			QNA_NO
+    		  , MEMBER_EMAIL
+    		  , QNA_TITLE
+    		  , QNA_CONTENT
+    		  , QNA_FILENAME
+    		  , QNA_FILEPATH)
+    		  
+    	values (
+              QNA_SEQ.NEXTVAL
+            ,'admin@admin.com'
+            ,#{qnaTitle}
+            ,#{qnaContent}
+            ,#{qnaFilename, jdbcType=VARCHAR }
+            ,#{qnaFilepath, jdbcType=VARCHAR })
+    </insert>
+    
+    <update id="updateBoard">
+        update QNA
+            set 
+               QNA_TITLE = #{qnaTitle }
+              , QNA_CONTENT = #{qnaContent }
+              , QNA_FILENAME = #{qnaFilename, jdbcType=VARCHAR }
+              , QNA_FILEPATH = #{qnaFilepath, jdbcType=VARCHAR }
+            WHERE 
+               qnaNo = #{qnaNo}
+
+    </update>
+    <select id="detail" parameterType="long" resultType="kr.or.eutchapedia.board.entity.QnaVO">
+		select 
+			* 
+			from QNA
+			where 
+				QNA_NO = #{qnaNo, jdbcType=LONGVARCHAR}
+	</select>
+    <delete id="deleteBoard">
+        delete 
+         from QNA 
+         where QNA_NO = ${qnaNo}
+
+    </delete>
+    
+    <select id="selectBoardByCode" parameterType="kr.or.eutchapedia.board.entity.QnaVO" resultType="kr.or.eutchapedia.board.entity.QnaVO">
+        select * from board
+        where
+            code = #{code}
+    </select>
+    <update id="reply" parameterType="kr.or.eutchapedia.board.entity.QnaVO">
+    	update QNA
+    			set A_CONTENT = #{aContent}
+    		where 
+    			QNA_NO = ${qnaNo}
+    </update>
+</mapper>

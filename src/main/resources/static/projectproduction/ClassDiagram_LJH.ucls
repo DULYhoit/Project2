@@ -1,0 +1,588 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<class-diagram version="1.2.4" icons="true" always-add-relationships="false" generalizations="true" realizations="true" 
+  associations="true" dependencies="false" nesting-relationships="true" router="FAN">  
+  <interface id="1" language="java" name="kr.or.eutchapedia.search.repository.SearchMapper" project="KH-FINAL-PROJECT" 
+    file="/KH-FINAL-PROJECT/src/main/java/kr/or/eutchapedia/search/repository/SearchMapper.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="185" y="513"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </interface>  
+  <class id="2" language="java" name="kr.or.eutchapedia.search.service.SearchDao" project="KH-FINAL-PROJECT" 
+    file="/KH-FINAL-PROJECT/src/main/java/kr/or/eutchapedia/search/service/SearchDao.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="185" y="345"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="3" language="java" name="kr.or.eutchapedia.search.controller.SearchController" project="KH-FINAL-PROJECT" 
+    file="/KH-FINAL-PROJECT/src/main/java/kr/or/eutchapedia/search/controller/SearchController.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="122" y="24"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="4" language="java" name="kr.or.eutchapedia.search.domain.SearchMemberVo" project="KH-FINAL-PROJECT" 
+    file="/KH-FINAL-PROJECT/src/main/java/kr/or/eutchapedia/search/domain/SearchMemberVo.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="357" y="96"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="5" language="java" name="kr.or.eutchapedia.search.domain.SearchMovieVo" project="KH-FINAL-PROJECT" 
+    file="/KH-FINAL-PROJECT/src/main/java/kr/or/eutchapedia/search/domain/SearchMovieVo.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="585" y="150"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="6" language="java" name="kr.or.eutchapedia.movie.collection.domain.CollectionVo" project="KH-FINAL-PROJECT" 
+    file="/KH-FINAL-PROJECT/src/main/java/kr/or/eutchapedia/movie/collection/domain/CollectionVo.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="176" y="870"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="7" language="java" name="kr.or.eutchapedia.movie.collection.controller.CollectionController" 
+    project="KH-FINAL-PROJECT" 
+    file="/KH-FINAL-PROJECT/src/main/java/kr/or/eutchapedia/movie/collection/controller/CollectionController.java" 
+    binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="430" y="681"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="8" language="java" name="kr.or.eutchapedia.movie.collection.service.CollectionDao" 
+    project="KH-FINAL-PROJECT" 
+    file="/KH-FINAL-PROJECT/src/main/java/kr/or/eutchapedia/movie/collection/service/CollectionDao.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="434" y="926"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <interface id="9" language="java" name="kr.or.eutchapedia.movie.collection.repository.CollectionMapper" 
+    project="KH-FINAL-PROJECT" 
+    file="/KH-FINAL-PROJECT/src/main/java/kr/or/eutchapedia/movie/collection/repository/CollectionMapper.java" 
+    binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="434" y="1058"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </interface>  
+  <class id="10" language="java" name="kr.or.eutchapedia.movie.detail.controller.WannaWatchController" 
+    project="KH-FINAL-PROJECT" 
+    file="/KH-FINAL-PROJECT/src/main/java/kr/or/eutchapedia/movie/detail/controller/WannaWatchController.java" 
+    binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="1703" y="-33"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="11" language="java" name="kr.or.eutchapedia.movie.detail.service.WannaWatchDao" project="KH-FINAL-PROJECT" 
+    file="/KH-FINAL-PROJECT/src/main/java/kr/or/eutchapedia/movie/detail/service/WannaWatchDao.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="1655" y="304"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="12" language="java" name="kr.or.eutchapedia.movie.detail.service.CommentReportDao" 
+    project="KH-FINAL-PROJECT" 
+    file="/KH-FINAL-PROJECT/src/main/java/kr/or/eutchapedia/movie/detail/service/CommentReportDao.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="1037" y="1351"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="13" language="java" name="kr.or.eutchapedia.movie.detail.domain.StaffFilmoVo" project="KH-FINAL-PROJECT" 
+    file="/KH-FINAL-PROJECT/src/main/java/kr/or/eutchapedia/movie/detail/domain/StaffFilmoVo.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="896" y="156"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="14" language="java" name="kr.or.eutchapedia.movie.detail.controller.CommentReportController" 
+    project="KH-FINAL-PROJECT" 
+    file="/KH-FINAL-PROJECT/src/main/java/kr/or/eutchapedia/movie/detail/controller/CommentReportController.java" 
+    binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="1106" y="1037"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="15" language="java" name="kr.or.eutchapedia.movie.detail.domain.WannaWatchVo" project="KH-FINAL-PROJECT" 
+    file="/KH-FINAL-PROJECT/src/main/java/kr/or/eutchapedia/movie/detail/domain/WannaWatchVo.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="1130" y="66"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="16" language="java" name="kr.or.eutchapedia.movie.detail.service.CommentLikeDao" project="KH-FINAL-PROJECT" 
+    file="/KH-FINAL-PROJECT/src/main/java/kr/or/eutchapedia/movie/detail/service/CommentLikeDao.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="1485" y="1296"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="17" language="java" name="kr.or.eutchapedia.movie.detail.domain.CommentLikeVo" project="KH-FINAL-PROJECT" 
+    file="/KH-FINAL-PROJECT/src/main/java/kr/or/eutchapedia/movie/detail/domain/CommentLikeVo.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="1359" y="75"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="18" language="java" name="kr.or.eutchapedia.movie.detail.domain.CommentPage" project="KH-FINAL-PROJECT" 
+    file="/KH-FINAL-PROJECT/src/main/java/kr/or/eutchapedia/movie/detail/domain/CommentPage.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="758" y="785"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <interface id="19" language="java" name="kr.or.eutchapedia.movie.detail.repository.CommentReportMapper" 
+    project="KH-FINAL-PROJECT" 
+    file="/KH-FINAL-PROJECT/src/main/java/kr/or/eutchapedia/movie/detail/repository/CommentReportMapper.java" 
+    binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="1037" y="1717"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </interface>  
+  <class id="20" language="java" name="kr.or.eutchapedia.movie.detail.domain.CommentListVo" project="KH-FINAL-PROJECT" 
+    file="/KH-FINAL-PROJECT/src/main/java/kr/or/eutchapedia/movie/detail/domain/CommentListVo.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="993" y="686"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="21" language="java" name="kr.or.eutchapedia.movie.detail.domain.CommentReportVo" project="KH-FINAL-PROJECT" 
+    file="/KH-FINAL-PROJECT/src/main/java/kr/or/eutchapedia/movie/detail/domain/CommentReportVo.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="1229" y="551"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <interface id="22" language="java" name="kr.or.eutchapedia.movie.detail.repository.CommentMapper" 
+    project="KH-FINAL-PROJECT" 
+    file="/KH-FINAL-PROJECT/src/main/java/kr/or/eutchapedia/movie/detail/repository/CommentMapper.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="2267" y="1662"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </interface>  
+  <class id="23" language="java" name="kr.or.eutchapedia.movie.detail.controller.CommentLikeController" 
+    project="KH-FINAL-PROJECT" 
+    file="/KH-FINAL-PROJECT/src/main/java/kr/or/eutchapedia/movie/detail/controller/CommentLikeController.java" 
+    binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="1530" y="1037"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="24" language="java" name="kr.or.eutchapedia.movie.detail.domain.MovieInfoVo" project="KH-FINAL-PROJECT" 
+    file="/KH-FINAL-PROJECT/src/main/java/kr/or/eutchapedia/movie/detail/domain/MovieInfoVo.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="2063" y="288"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="25" language="java" name="kr.or.eutchapedia.movie.detail.domain.StaffInfoVo" project="KH-FINAL-PROJECT" 
+    file="/KH-FINAL-PROJECT/src/main/java/kr/or/eutchapedia/movie/detail/domain/StaffInfoVo.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="2303" y="126"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="26" language="java" name="kr.or.eutchapedia.movie.detail.service.MovieDetailDao" project="KH-FINAL-PROJECT" 
+    file="/KH-FINAL-PROJECT/src/main/java/kr/or/eutchapedia/movie/detail/service/MovieDetailDao.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="1883" y="1359"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <interface id="27" language="java" name="kr.or.eutchapedia.movie.detail.repository.StarRatingMapper" 
+    project="KH-FINAL-PROJECT" 
+    file="/KH-FINAL-PROJECT/src/main/java/kr/or/eutchapedia/movie/detail/repository/StarRatingMapper.java" 
+    binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="2587" y="1635"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </interface>  
+  <class id="28" language="java" name="kr.or.eutchapedia.movie.detail.controller.MovieDetailController" 
+    project="KH-FINAL-PROJECT" 
+    file="/KH-FINAL-PROJECT/src/main/java/kr/or/eutchapedia/movie/detail/controller/MovieDetailController.java" 
+    binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="1896" y="1055"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="29" language="java" name="kr.or.eutchapedia.movie.detail.domain.StarRatingVo" project="KH-FINAL-PROJECT" 
+    file="/KH-FINAL-PROJECT/src/main/java/kr/or/eutchapedia/movie/detail/domain/StarRatingVo.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="2528" y="72"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="30" language="java" name="kr.or.eutchapedia.movie.detail.service.StarRatingDao" project="KH-FINAL-PROJECT" 
+    file="/KH-FINAL-PROJECT/src/main/java/kr/or/eutchapedia/movie/detail/service/StarRatingDao.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="2587" y="1269"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="31" language="java" name="kr.or.eutchapedia.movie.detail.service.CommentDao" project="KH-FINAL-PROJECT" 
+    file="/KH-FINAL-PROJECT/src/main/java/kr/or/eutchapedia/movie/detail/service/CommentDao.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="2267" y="1287"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <interface id="32" language="java" name="kr.or.eutchapedia.movie.detail.repository.MovieDetailMapper" 
+    project="KH-FINAL-PROJECT" 
+    file="/KH-FINAL-PROJECT/src/main/java/kr/or/eutchapedia/movie/detail/repository/MovieDetailMapper.java" 
+    binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="1883" y="1725"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </interface>  
+  <interface id="33" language="java" name="kr.or.eutchapedia.movie.detail.repository.WannaWatchMapper" 
+    project="KH-FINAL-PROJECT" 
+    file="/KH-FINAL-PROJECT/src/main/java/kr/or/eutchapedia/movie/detail/repository/WannaWatchMapper.java" 
+    binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="1655" y="670"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </interface>  
+  <class id="34" language="java" name="kr.or.eutchapedia.movie.detail.domain.CommentVo" project="KH-FINAL-PROJECT" 
+    file="/KH-FINAL-PROJECT/src/main/java/kr/or/eutchapedia/movie/detail/domain/CommentVo.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="2744" y="155"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="35" language="java" name="kr.or.eutchapedia.movie.detail.controller.CommentController" 
+    project="KH-FINAL-PROJECT" 
+    file="/KH-FINAL-PROJECT/src/main/java/kr/or/eutchapedia/movie/detail/controller/CommentController.java" 
+    binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="2258" y="1064"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <interface id="36" language="java" name="kr.or.eutchapedia.movie.detail.repository.CommentLikeMapper" 
+    project="KH-FINAL-PROJECT" 
+    file="/KH-FINAL-PROJECT/src/main/java/kr/or/eutchapedia/movie/detail/repository/CommentLikeMapper.java" 
+    binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="1485" y="1662"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </interface>  
+  <class id="37" language="java" name="kr.or.eutchapedia.movie.detail.controller.StarRatingController" 
+    project="KH-FINAL-PROJECT" 
+    file="/KH-FINAL-PROJECT/src/main/java/kr/or/eutchapedia/movie/detail/controller/StarRatingController.java" 
+    binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="2687" y="1037"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <association id="38">    
+    <end type="SOURCE" refId="26" navigable="false">      
+      <attribute id="39" name="mapper">        
+        <position height="0" width="0" x="-184" y="-128"/>      
+      </attribute>      
+      <multiplicity id="40" minimum="0" maximum="1">        
+        <position height="0" width="0" x="-184" y="-128"/>      
+      </multiplicity>    
+    </end>    
+    <end type="TARGET" refId="32" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="41">    
+    <end type="SOURCE" refId="2" navigable="false">      
+      <attribute id="42" name="mapper">        
+        <position height="0" width="0" x="0" y="0"/>      
+      </attribute>      
+      <multiplicity id="43" minimum="0" maximum="1">        
+        <position height="0" width="0" x="0" y="0"/>      
+      </multiplicity>    
+    </end>    
+    <end type="TARGET" refId="1" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="44">    
+    <end type="SOURCE" refId="16" navigable="false">      
+      <attribute id="45" name="mapper">        
+        <position height="0" width="0" x="-184" y="-128"/>      
+      </attribute>      
+      <multiplicity id="46" minimum="0" maximum="1">        
+        <position height="0" width="0" x="-184" y="-128"/>      
+      </multiplicity>    
+    </end>    
+    <end type="TARGET" refId="36" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="47">    
+    <end type="SOURCE" refId="8" navigable="false">      
+      <attribute id="48" name="mapper">        
+        <position height="0" width="0" x="0" y="0"/>      
+      </attribute>      
+      <multiplicity id="49" minimum="0" maximum="1">        
+        <position height="0" width="0" x="0" y="0"/>      
+      </multiplicity>    
+    </end>    
+    <end type="TARGET" refId="9" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="50">    
+    <end type="SOURCE" refId="10" navigable="false">      
+      <attribute id="51" name="wannaWatchDao">        
+        <position height="0" width="0" x="0" y="0"/>      
+      </attribute>      
+      <multiplicity id="52" minimum="0" maximum="1">        
+        <position height="0" width="0" x="0" y="0"/>      
+      </multiplicity>    
+    </end>    
+    <end type="TARGET" refId="11" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="53">    
+    <end type="SOURCE" refId="11" navigable="false">      
+      <attribute id="54" name="mapper">        
+        <position height="0" width="0" x="0" y="0"/>      
+      </attribute>      
+      <multiplicity id="55" minimum="0" maximum="1">        
+        <position height="0" width="0" x="0" y="0"/>      
+      </multiplicity>    
+    </end>    
+    <end type="TARGET" refId="33" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="56">    
+    <end type="SOURCE" refId="23" navigable="false">      
+      <attribute id="57" name="dao">        
+        <position height="0" width="0" x="-184" y="-128"/>      
+      </attribute>      
+      <multiplicity id="58" minimum="0" maximum="1">        
+        <position height="0" width="0" x="-184" y="-128"/>      
+      </multiplicity>    
+    </end>    
+    <end type="TARGET" refId="16" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="59">    
+    <end type="SOURCE" refId="30" navigable="false">      
+      <attribute id="60" name="mapper">        
+        <position height="0" width="0" x="-184" y="-128"/>      
+      </attribute>      
+      <multiplicity id="61" minimum="0" maximum="1">        
+        <position height="0" width="0" x="-184" y="-128"/>      
+      </multiplicity>    
+    </end>    
+    <end type="TARGET" refId="27" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="62">    
+    <end type="SOURCE" refId="35" navigable="false">      
+      <attribute id="63" name="commentDao">        
+        <position height="0" width="0" x="-184" y="-128"/>      
+      </attribute>      
+      <multiplicity id="64" minimum="0" maximum="1">        
+        <position height="0" width="0" x="-184" y="-128"/>      
+      </multiplicity>    
+    </end>    
+    <end type="TARGET" refId="31" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="65">    
+    <end type="SOURCE" refId="12" navigable="false">      
+      <attribute id="66" name="mapper">        
+        <position height="0" width="0" x="-184" y="-128"/>      
+      </attribute>      
+      <multiplicity id="67" minimum="0" maximum="1">        
+        <position height="0" width="0" x="-184" y="-128"/>      
+      </multiplicity>    
+    </end>    
+    <end type="TARGET" refId="19" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="68">    
+    <end type="SOURCE" refId="14" navigable="false">      
+      <attribute id="69" name="dao">        
+        <position height="0" width="0" x="-184" y="-128"/>      
+      </attribute>      
+      <multiplicity id="70" minimum="0" maximum="1">        
+        <position height="0" width="0" x="-184" y="-128"/>      
+      </multiplicity>    
+    </end>    
+    <end type="TARGET" refId="12" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="71">    
+    <end type="SOURCE" refId="7" navigable="false">      
+      <attribute id="72" name="collectionDao">        
+        <position height="0" width="0" x="0" y="0"/>      
+      </attribute>      
+      <multiplicity id="73" minimum="0" maximum="1">        
+        <position height="0" width="0" x="0" y="0"/>      
+      </multiplicity>    
+    </end>    
+    <end type="TARGET" refId="8" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="74">    
+    <end type="SOURCE" refId="31" navigable="false">      
+      <attribute id="75" name="mapper">        
+        <position height="0" width="0" x="-184" y="-128"/>      
+      </attribute>      
+      <multiplicity id="76" minimum="0" maximum="1">        
+        <position height="0" width="0" x="-184" y="-128"/>      
+      </multiplicity>    
+    </end>    
+    <end type="TARGET" refId="22" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="77">    
+    <end type="SOURCE" refId="28" navigable="false">      
+      <attribute id="78" name="movieDetailDao">        
+        <position height="0" width="0" x="-184" y="-128"/>      
+      </attribute>      
+      <multiplicity id="79" minimum="0" maximum="1">        
+        <position height="0" width="0" x="-184" y="-128"/>      
+      </multiplicity>    
+    </end>    
+    <end type="TARGET" refId="26" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="80">    
+    <end type="SOURCE" refId="37" navigable="false">      
+      <attribute id="81" name="starRatingDao">        
+        <position height="0" width="0" x="-184" y="-128"/>      
+      </attribute>      
+      <multiplicity id="82" minimum="0" maximum="1">        
+        <position height="0" width="0" x="-184" y="-128"/>      
+      </multiplicity>    
+    </end>    
+    <end type="TARGET" refId="30" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="83">    
+    <end type="SOURCE" refId="3" navigable="false">      
+      <attribute id="84" name="searchDao">        
+        <position height="0" width="0" x="0" y="0"/>      
+      </attribute>      
+      <multiplicity id="85" minimum="0" maximum="1">        
+        <position height="0" width="0" x="0" y="0"/>      
+      </multiplicity>    
+    </end>    
+    <end type="TARGET" refId="2" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <classifier-display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+    sort-features="false" accessors="true" visibility="true">    
+    <attributes public="true" package="true" protected="true" private="true" static="true"/>    
+    <operations public="true" package="true" protected="true" private="true" static="true"/>  
+  </classifier-display>  
+  <association-display labels="true" multiplicity="true"/>
+</class-diagram>

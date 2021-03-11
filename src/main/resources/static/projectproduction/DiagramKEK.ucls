@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<class-diagram version="1.2.4" icons="true" automaticImage="JPEG" always-add-relationships="false" 
+  generalizations="true" realizations="true" associations="true" dependencies="false" nesting-relationships="true" 
+  router="FAN">  
+  <class id="1" language="java" name="kr.or.eutchapedia.admin.movie.controller.AdminMovieController" 
+    project="KH-FINAL-PROJECT" 
+    file="/KH-FINAL-PROJECT/src/main/java/kr/or/eutchapedia/admin/movie/controller/AdminMovieController.java" 
+    binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="1836" y="841"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <interface id="2" language="java" name="kr.or.eutchapedia.admin.movie.dao.MovieDao" project="KH-FINAL-PROJECT" 
+    file="/KH-FINAL-PROJECT/src/main/java/kr/or/eutchapedia/admin/movie/dao/MovieDao.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="1355" y="964"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </interface>  
+  <class id="3" language="java" name="kr.or.eutchapedia.admin.movie.entity.Memberdash" project="KH-FINAL-PROJECT" 
+    file="/KH-FINAL-PROJECT/src/main/java/kr/or/eutchapedia/admin/movie/entity/Memberdash.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="2204" y="1666"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="4" language="java" name="kr.or.eutchapedia.admin.movie.entity.MovieCount" project="KH-FINAL-PROJECT" 
+    file="/KH-FINAL-PROJECT/src/main/java/kr/or/eutchapedia/admin/movie/entity/MovieCount.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="2417" y="1635"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="5" language="java" name="kr.or.eutchapedia.admin.movie.entity.PickInfo" project="KH-FINAL-PROJECT" 
+    file="/KH-FINAL-PROJECT/src/main/java/kr/or/eutchapedia/admin/movie/entity/PickInfo.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="2628" y="1693"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="6" language="java" name="kr.or.eutchapedia.admin.movie.entity.PickInfoDummy" project="KH-FINAL-PROJECT" 
+    file="/KH-FINAL-PROJECT/src/main/java/kr/or/eutchapedia/admin/movie/entity/PickInfoDummy.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="2841" y="1693"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="7" language="java" name="kr.or.eutchapedia.admin.movie.entity.CommentCount" project="KH-FINAL-PROJECT" 
+    file="/KH-FINAL-PROJECT/src/main/java/kr/or/eutchapedia/admin/movie/entity/CommentCount.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="2203" y="1853"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="8" language="java" name="kr.or.eutchapedia.admin.movie.entity.CommentDetail" project="KH-FINAL-PROJECT" 
+    file="/KH-FINAL-PROJECT/src/main/java/kr/or/eutchapedia/admin/movie/entity/CommentDetail.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="3038" y="1747"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="9" language="java" name="kr.or.eutchapedia.admin.movie.entity.PickMovieInfo" project="KH-FINAL-PROJECT" 
+    file="/KH-FINAL-PROJECT/src/main/java/kr/or/eutchapedia/admin/movie/entity/PickMovieInfo.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="2249" y="889"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="10" language="java" name="kr.or.eutchapedia.admin.movie.entity.MovieGoodChart" project="KH-FINAL-PROJECT" 
+    file="/KH-FINAL-PROJECT/src/main/java/kr/or/eutchapedia/admin/movie/entity/MovieGoodChart.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="2459" y="727"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="11" language="java" name="kr.or.eutchapedia.admin.movie.entity.MovieInfo" project="KH-FINAL-PROJECT" 
+    file="/KH-FINAL-PROJECT/src/main/java/kr/or/eutchapedia/admin/movie/entity/MovieInfo.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="2679" y="1024"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="12" language="java" name="kr.or.eutchapedia.admin.movie.entity.MovieChart" project="KH-FINAL-PROJECT" 
+    file="/KH-FINAL-PROJECT/src/main/java/kr/or/eutchapedia/admin/movie/entity/MovieChart.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="2459" y="963"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="13" language="java" name="kr.or.eutchapedia.admin.movie.entity.CommentEnrollment" 
+    project="KH-FINAL-PROJECT" 
+    file="/KH-FINAL-PROJECT/src/main/java/kr/or/eutchapedia/admin/movie/entity/CommentEnrollment.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="2908" y="992"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <interface id="14" language="java" name="kr.or.eutchapedia.admin.movie.service.MovieService" 
+    project="KH-FINAL-PROJECT" 
+    file="/KH-FINAL-PROJECT/src/main/java/kr/or/eutchapedia/admin/movie/service/MovieService.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="1820" y="1674"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </interface>  
+  <class id="15" language="java" name="kr.or.eutchapedia.admin.movie.service.MovieServiceImp" project="KH-FINAL-PROJECT" 
+    file="/KH-FINAL-PROJECT/src/main/java/kr/or/eutchapedia/admin/movie/service/MovieServiceImp.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="1212" y="1680"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <association id="16">    
+    <end type="SOURCE" refId="1" navigable="false">      
+      <attribute id="17" name="service"/>      
+      <multiplicity id="18" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="14" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <realization id="19">    
+    <end type="SOURCE" refId="15"/>    
+    <end type="TARGET" refId="14"/>  
+  </realization>  
+  <association id="20">    
+    <end type="SOURCE" refId="15" navigable="false">      
+      <attribute id="21" name="moviedao"/>      
+      <multiplicity id="22" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="2" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <classifier-display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+    sort-features="false" accessors="true" visibility="true">    
+    <attributes public="true" package="true" protected="true" private="true" static="true"/>    
+    <operations public="true" package="true" protected="true" private="true" static="true"/>  
+  </classifier-display>  
+  <association-display labels="true" multiplicity="true"/>
+</class-diagram>

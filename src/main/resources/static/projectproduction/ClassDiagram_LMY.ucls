@@ -1,0 +1,239 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<class-diagram version="1.2.4" icons="true" always-add-relationships="false" generalizations="true" realizations="true" 
+  associations="true" dependencies="false" nesting-relationships="true" router="FAN">  
+  <class id="1" language="java" name="kr.or.eutchapedia.mypage.controller.MypageEditController" 
+    project="KH-FINAL-PROJECT" 
+    file="/KH-FINAL-PROJECT/src/main/java/kr/or/eutchapedia/mypage/controller/MypageEditController.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="1592" y="218"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="2" language="java" name="kr.or.eutchapedia.mypage.controller.MypageMemberController" 
+    project="KH-FINAL-PROJECT" 
+    file="/KH-FINAL-PROJECT/src/main/java/kr/or/eutchapedia/mypage/controller/MypageMemberController.java" 
+    binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="1478" y="432"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="3" language="java" name="kr.or.eutchapedia.mypage.controller.MypageWithdrawController" 
+    project="KH-FINAL-PROJECT" 
+    file="/KH-FINAL-PROJECT/src/main/java/kr/or/eutchapedia/mypage/controller/MypageWithdrawController.java" 
+    binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="1581" y="630"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="4" language="java" name="kr.or.eutchapedia.mypage.controller.FileUtils" project="KH-FINAL-PROJECT" 
+    file="/KH-FINAL-PROJECT/src/main/java/kr/or/eutchapedia/mypage/controller/FileUtils.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="1435" y="1164"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="5" language="java" name="kr.or.eutchapedia.mypage.controller.MypageController" project="KH-FINAL-PROJECT" 
+    file="/KH-FINAL-PROJECT/src/main/java/kr/or/eutchapedia/mypage/controller/MypageController.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="1518" y="958"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <interface id="6" language="java" name="kr.or.eutchapedia.mypage.dao.MypageSortDao" project="KH-FINAL-PROJECT" 
+    file="/KH-FINAL-PROJECT/src/main/java/kr/or/eutchapedia/mypage/dao/MypageSortDao.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="3702" y="735"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </interface>  
+  <interface id="7" language="java" name="kr.or.eutchapedia.mypage.dao.MypageDao" project="KH-FINAL-PROJECT" 
+    file="/KH-FINAL-PROJECT/src/main/java/kr/or/eutchapedia/mypage/dao/MypageDao.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="3687" y="336"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </interface>  
+  <interface id="8" language="java" name="kr.or.eutchapedia.mypage.service.MypageService" project="KH-FINAL-PROJECT" 
+    file="/KH-FINAL-PROJECT/src/main/java/kr/or/eutchapedia/mypage/service/MypageService.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="2486" y="483"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </interface>  
+  <class id="9" language="java" name="kr.or.eutchapedia.mypage.service.MypageServiceImpl" project="KH-FINAL-PROJECT" 
+    file="/KH-FINAL-PROJECT/src/main/java/kr/or/eutchapedia/mypage/service/MypageServiceImpl.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="3109" y="474"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="10" language="java" name="kr.or.eutchapedia.mypage.entity.WannaWatchVo" project="KH-FINAL-PROJECT" 
+    file="/KH-FINAL-PROJECT/src/main/java/kr/or/eutchapedia/mypage/entity/WannaWatchVo.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="2378" y="1158"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="11" language="java" name="kr.or.eutchapedia.mypage.entity.StarRatingForMainVo" project="KH-FINAL-PROJECT" 
+    file="/KH-FINAL-PROJECT/src/main/java/kr/or/eutchapedia/mypage/entity/StarRatingForMainVo.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="2686" y="1276"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="12" language="java" name="kr.or.eutchapedia.mypage.entity.StarRatingVo" project="KH-FINAL-PROJECT" 
+    file="/KH-FINAL-PROJECT/src/main/java/kr/or/eutchapedia/mypage/entity/StarRatingVo.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="2968" y="1074"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="13" language="java" name="kr.or.eutchapedia.mypage.entity.LeaveMemberVo" project="KH-FINAL-PROJECT" 
+    file="/KH-FINAL-PROJECT/src/main/java/kr/or/eutchapedia/mypage/entity/LeaveMemberVo.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="3246" y="1164"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="14" language="java" name="kr.or.eutchapedia.mypage.entity.MemberVoTemp" project="KH-FINAL-PROJECT" 
+    file="/KH-FINAL-PROJECT/src/main/java/kr/or/eutchapedia/mypage/entity/MemberVoTemp.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="3531" y="1038"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="15" language="java" name="kr.or.eutchapedia.mypage.entity.MemberVo" project="KH-FINAL-PROJECT" 
+    file="/KH-FINAL-PROJECT/src/main/java/kr/or/eutchapedia/mypage/entity/MemberVo.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="2052" y="1278"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <association id="16">    
+    <end type="SOURCE" refId="3" navigable="false">      
+      <attribute id="17" name="service">        
+        <position height="0" width="0" x="0" y="0"/>      
+      </attribute>      
+      <multiplicity id="18" minimum="0" maximum="1">        
+        <position height="0" width="0" x="0" y="0"/>      
+      </multiplicity>    
+    </end>    
+    <end type="TARGET" refId="8" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="19">    
+    <end type="SOURCE" refId="9" navigable="false">      
+      <attribute id="20" name="Dao">        
+        <position height="0" width="0" x="660" y="-92"/>      
+      </attribute>      
+      <multiplicity id="21" minimum="0" maximum="1">        
+        <position height="0" width="0" x="660" y="-92"/>      
+      </multiplicity>    
+    </end>    
+    <end type="TARGET" refId="7" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <realization id="22">    
+    <end type="SOURCE" refId="9"/>    
+    <end type="TARGET" refId="8"/>  
+  </realization>  
+  <association id="23">    
+    <end type="SOURCE" refId="9" navigable="false">      
+      <attribute id="24" name="SortDao">        
+        <position height="0" width="0" x="648" y="-456"/>      
+      </attribute>      
+      <multiplicity id="25" minimum="0" maximum="1">        
+        <position height="0" width="0" x="648" y="-456"/>      
+      </multiplicity>    
+    </end>    
+    <end type="TARGET" refId="6" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="26">    
+    <end type="SOURCE" refId="2" navigable="false">      
+      <attribute id="27" name="service">        
+        <position height="0" width="0" x="0" y="0"/>      
+      </attribute>      
+      <multiplicity id="28" minimum="0" maximum="1">        
+        <position height="0" width="0" x="0" y="0"/>      
+      </multiplicity>    
+    </end>    
+    <end type="TARGET" refId="8" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="29">    
+    <end type="SOURCE" refId="1" navigable="false">      
+      <attribute id="30" name="service">        
+        <position height="0" width="0" x="0" y="0"/>      
+      </attribute>      
+      <multiplicity id="31" minimum="0" maximum="1">        
+        <position height="0" width="0" x="0" y="0"/>      
+      </multiplicity>    
+    </end>    
+    <end type="TARGET" refId="8" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="32">    
+    <end type="SOURCE" refId="5" navigable="false">      
+      <attribute id="33" name="service">        
+        <position height="0" width="0" x="0" y="0"/>      
+      </attribute>      
+      <multiplicity id="34" minimum="0" maximum="1">        
+        <position height="0" width="0" x="0" y="0"/>      
+      </multiplicity>    
+    </end>    
+    <end type="TARGET" refId="8" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <classifier-display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+    sort-features="false" accessors="true" visibility="true">    
+    <attributes public="true" package="true" protected="true" private="true" static="true"/>    
+    <operations public="true" package="true" protected="true" private="true" static="true"/>  
+  </classifier-display>  
+  <association-display labels="true" multiplicity="true"/>
+</class-diagram>

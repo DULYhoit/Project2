@@ -1,0 +1,89 @@
+#pick-h1{
+    text-align: center;
+    margin-top: 25px;
+}
+#addpick-search-container{
+    float: right;
+    margin-top: 20px;
+}
+#addpick-input-tag{
+    width: 100px;
+    display: inline-block;
+
+    
+}
+#addpick-input-text{
+    display: inline-block;
+      
+  
+}
+#addpick-input-data{
+    text-align: center;
+}
+
+#input-size{
+    margin-left: 15px;
+    text-align: center;
+}
+
+#addpick-select-button{
+    margin-bottom: 9px;
+}
+
+#addpick-select-search{
+	width:100px;
+    margin-bottom: 9px;
+}
+
+#addpick-mtext{
+    width: 300px;
+}
+#addpick-btn-click{
+    display: inline-block;
+}
+#addpick-input-data{
+    margin-top: 120px;
+    
+}
+#addpick-input-data > table{
+    background-color: white;
+    border: 2px solid #dcdcdc;
+}
+#addpick-data-page{
+    width: 35%;
+    text-align:center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#pagiedit > li > a{
+	    padding: .5rem .60rem;
+}
+
+#addpick-input-title{
+    float: right;
+    margin-top: 30px;
+}
+#addpick-ctitle{
+    display: inline-block;
+    
+}
+#addpick-input-cname{
+    display: inline-block;
+    margin-left: 30px;
+}
+
+#follow-data-container{
+    text-align: center;
+}
+#follow-data-container > table{
+    background-color: white;
+    border: 2px solid #dcdcdc;
+}
+#addpick-submit{
+    text-align: center;
+}
+
+#send-table-data > :last-child{
+    cursor: pointer;
+}

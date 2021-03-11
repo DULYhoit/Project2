@@ -1,0 +1,83 @@
+/* not member css */
+#modal-title-wrapper {
+    border: none;
+}
+
+#modal-contents {
+    text-align: center;
+}
+
+#modal-contents img {
+    width: 80px;
+    height: 80px;
+    margin-bottom: 20px;
+}
+
+#modal-contents p {
+    font-weight: bold;
+}
+
+#footer-buttons {
+    margin: 0 auto;
+    text-align: center;
+    border: none;
+}
+
+#footer-button-wrapper {
+    display: block;
+}
+
+#button-for-signup {
+    background-color: rgb(255, 7, 88);
+    color: white;
+    width: 200px;
+    border: none;
+    font-weight: bold;
+}
+
+#button-for-signin {
+    width: 200px;
+    border: none;
+    background-color: white;
+    color: rgb(255, 7, 88);
+    font-weight: bold;
+}
+
+#star-rating {
+    display: inline-block;
+    position: relative;
+    left: 350px;
+    top: -77px;
+}
+
+
+#star-rating p {
+    margin: 5px 0;
+}
+
+#star-average {
+    width: 800px;
+    border-top: 1px solid #aaa;
+    border-bottom: 1px solid #aaa;
+    padding: 5px 3px;
+    margin-bottom: 10px;
+}
+
+#year-genre-country {
+    padding: 3px;
+    margin-bottom: 10px;
+}
+
+#link-for-star-rating:hover {
+    cursor: pointer;
+}
+
+#staffs-slider a {
+    color: black;
+}
+#staffs-slider a:hover {
+    color: black;
+    font-weight: bold;
+    text-decoration: none;
+}
+

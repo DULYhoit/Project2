@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<class-diagram version="1.1.14" icons="true" always-add-relationships="false" generalizations="true" realizations="true" 
+  associations="true" dependencies="false" nesting-relationships="true" router="FAN">  
+  <class id="1" language="java" name="kr.or.eutchapedia.login.controller.SignupController" project="KH-FINAL-PROJECT" 
+    file="/KH-FINAL-PROJECT/src/main/java/kr/or/eutchapedia/login/controller/SignupController.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="136" width="466" x="784" y="-2"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="2" language="java" name="kr.or.eutchapedia.login.vo.MemberVoTemp" project="KH-FINAL-PROJECT" 
+    file="/KH-FINAL-PROJECT/src/main/java/kr/or/eutchapedia/login/vo/MemberVoTemp.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="396" width="247" x="198" y="-2"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="3" language="java" name="kr.or.eutchapedia.login.controller.Utils" project="KH-FINAL-PROJECT" 
+    file="/KH-FINAL-PROJECT/src/main/java/kr/or/eutchapedia/login/controller/Utils.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="156" width="241" x="1463" y="990"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <interface id="4" language="java" name="kr.or.eutchapedia.login.dao.MemberDaoInterface" project="KH-FINAL-PROJECT" 
+    file="/KH-FINAL-PROJECT/src/main/java/kr/or/eutchapedia/login/dao/MemberDaoInterface.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="216" width="253" x="1744" y="990"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </interface>  
+  <class id="5" language="java" name="kr.or.eutchapedia.login.vo.MemberVo" project="KH-FINAL-PROJECT" 
+    file="/KH-FINAL-PROJECT/src/main/java/kr/or/eutchapedia/login/vo/MemberVo.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="696" width="259" x="485" y="-2"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="6" language="java" name="kr.or.eutchapedia.login.controller.LogOutController" project="KH-FINAL-PROJECT" 
+    file="/KH-FINAL-PROJECT/src/main/java/kr/or/eutchapedia/login/controller/LogOutController.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="116" width="273" x="1290" y="-2"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="7" language="java" name="kr.or.eutchapedia.login.controller.AjaxController" project="KH-FINAL-PROJECT" 
+    file="/KH-FINAL-PROJECT/src/main/java/kr/or/eutchapedia/login/controller/AjaxController.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="136" width="216" x="1603" y="-2"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="8" language="java" name="kr.or.eutchapedia.login.controller.FindPasswordController" 
+    project="KH-FINAL-PROJECT" 
+    file="/KH-FINAL-PROJECT/src/main/java/kr/or/eutchapedia/login/controller/FindPasswordController.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="256" width="551" x="1859" y="-2"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="9" language="java" name="kr.or.eutchapedia.login.service.MemberService" project="KH-FINAL-PROJECT" 
+    file="/KH-FINAL-PROJECT/src/main/java/kr/or/eutchapedia/login/service/MemberService.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="216" width="255" x="1603" y="734"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="10" language="java" name="kr.or.eutchapedia.login.controller.LoginController" project="KH-FINAL-PROJECT" 
+    file="/KH-FINAL-PROJECT/src/main/java/kr/or/eutchapedia/login/controller/LoginController.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="136" width="496" x="2450" y="-2"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <association id="11">    
+    <end type="SOURCE" refId="1" navigable="false">      
+      <attribute id="12" name="memberService"/>      
+      <multiplicity id="13" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="9" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="14">    
+    <end type="SOURCE" refId="10" navigable="false">      
+      <attribute id="15" name="memberService"/>      
+      <multiplicity id="16" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="9" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="17">    
+    <end type="SOURCE" refId="9" navigable="false">      
+      <attribute id="18" name="utils"/>      
+      <multiplicity id="19" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="3" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="20">    
+    <end type="SOURCE" refId="6" navigable="false">      
+      <attribute id="21" name="memberService"/>      
+      <multiplicity id="22" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="9" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="23">    
+    <end type="SOURCE" refId="7" navigable="false">      
+      <attribute id="24" name="memberService"/>      
+      <multiplicity id="25" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="9" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="26">    
+    <end type="SOURCE" refId="9" navigable="false">      
+      <attribute id="27" name="memberDao"/>      
+      <multiplicity id="28" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="4" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="29">    
+    <end type="SOURCE" refId="8" navigable="false">      
+      <attribute id="30" name="memberService"/>      
+      <multiplicity id="31" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="9" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <classifier-display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+    sort-features="false" accessors="true" visibility="true">    
+    <attributes public="true" package="true" protected="true" private="true" static="true"/>    
+    <operations public="true" package="true" protected="true" private="true" static="true"/>  
+  </classifier-display>  
+  <association-display labels="true" multiplicity="true"/>
+</class-diagram>

@@ -1,0 +1,421 @@
+@charset "UTF-8";
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.page_notiboard_sction {
+    height: auto !important;
+}
+
+.page_notiboard_sction div {
+    word-break: break-all;
+}
+.page_notiboard_sction {
+	padding-top: 63px;
+    padding-bottom: 100px;
+}
+
+.notiboard_wrap {
+    display: flex;
+    position: relative;
+    min-width: 1300px;
+    max-width: 1800px;
+    margin: 40px auto 0;
+    padding: 0 50px 100px;
+}
+
+.article_left {
+    flex: none;
+    width: 230px;
+    padding: 0 20px 0 0;
+    box-sizing: border-box;
+    padding-top: 0;
+}
+
+#snb .title_snb {
+    padding: 8px 0 33px 1px;
+    font-weight: 700;
+    font-size: 30px;
+    line-height: 34px;
+    color: #333;
+    letter-spacing: -.5px;
+}
+
+.page_notiboard_sction h2 {
+    display: block;
+    margin-block-start: 0.83em;
+    margin-block-end: 0.83em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+}
+
+#snb .inner_snb {
+    border: 1px solid #f2f2f2;
+    border-bottom: 0;
+    margin-right: 20px;
+}
+
+.page_notiboard_sction ul {
+    list-style-type: none;
+}
+
+.page_notiboard_sction li {
+    display: list-item;
+    text-align: -webkit-match-parent;
+}
+
+#snb .list_menu li {
+    border-bottom: 1px solid #f2f2f2;
+}
+
+#snb .list_menu li.on a, #snb .list_menu li.on a:hover {
+    background: rgba(255, 2, 150, 0.308);
+    background-size: 6px 11px;
+    font-weight: 700;
+    color: #333;
+}
+
+#snb .list_menu li a:hover {
+    background: rgba(252, 172, 221, 0.349);
+    background-size: 6px 11px;
+    font-weight: 700;
+    color: #333;
+}
+
+#snb .list_menu li a {
+    display: block;
+    overflow: hidden;
+    padding: 15px 0 15px 20px;
+    font-size: 14px;
+    line-height: 20px;
+    letter-spacing: -.3px;
+    text-decoration: none;
+    cursor: pointer;
+    color: #333;
+}
+
+/********************* 공지사항 본문 내용 *********************/
+.article_right {
+    float: 1;
+}
+
+.notiboard_section .head_aticle .tit {
+    padding-top: 30px;
+    height: 36px;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 36px;
+    color: #333;
+    letter-spacing: -.5px;
+}
+
+.notiboard_section .head_aticle .tit_sub {
+    padding-left: 11px;
+    font-size: 14px;
+    color: #999;
+    line-height: 20px;
+    letter-spacing: -.3px;
+    vertical-align: 3px;
+}
+
+.head_aticle .tt_tbl {
+    overflow: hidden;
+    margin-top: 40px;
+    border-bottom: 4px solid #000;
+}
+/********************* 아코디언 목록 *********************/
+.accordion_sub {
+    display: none;
+}
+.tbl_notice_tit {
+    border-bottom: 1px solid #000;
+    font-weight: 700;
+}
+
+.tbl_notice_info, .tbl_notice_info .infoinner {
+    display: table;
+    width: 100%;
+}
+
+.tbl_notice_info {
+    table-layout: fixed;
+    position: relative;
+    box-sizing: border-box;
+    color: #303033;
+}
+
+.tbl_notice_info p {
+    display: table-cell;
+    min-height: 50px;
+    vertical-align: middle;
+    font-size: 14px;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+.tbl_notice_info .tbl_info_type {
+    width: 80px;
+    padding: 15px 0;
+    color: #000;
+}
+
+.tbl_notice_info .tbl_info_tit {
+    padding: 15px 3% 15px 0;
+    color: #000;
+    text-align: left;
+    cursor: pointer;
+}
+
+.tbl_notice_info .tbl_info_date {
+    width: 130px;
+    padding: 15px 1%;
+    color: #000;
+}
+
+.notiboard_section .accordion_title {
+    border-bottom: 1px solid #d4d4d4;
+}
+
+.notiboard_section .accordion_title .infoinner .tbl_info_type,
+.notiboard_section .accordion_title .infoinner .tbl_info_date {
+    color: #5d5d5d;
+}
+
+.notiboard_section .accordion_title .blind {
+    overflow: hidden;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 1px;
+    height: 1px;
+    font-size: 1px;
+    line-height: 100px;
+    white-space: nowrap;
+}
+
+.notiboard_wrap .active .reply_row {
+    display: block;
+}
+
+.notiboard_wrap .notice_wrap {
+    position: relative;
+    z-index: 1;
+    margin: -1px 0;
+    padding: 30px 30px 30px 140px;
+    background: #f8f8f8;
+    text-align: left;
+}
+
+.notiboard_wrap .notice_wrap p {
+    font-size: 14px;
+    color: #303033;
+    line-height: 24px;
+    text-align: left;
+    margin-bottom: -0.1em;
+}
+
+/********************* 페이징 *********************/
+.pagination_section {
+    display: block;
+    text-align: center;
+}
+
+.pagination_section .custom_pagination {
+    margin-top: 35px;
+}
+
+.custom_pagination {
+    display: inline-block;
+    position: relative;
+    padding: 0 50px;
+    text-align: center;
+    line-height: 22px;
+    vertical-align: top;
+}
+
+.custom_pagination a {
+    outline: none;
+    text-decoration: none;
+}
+
+.custom_pagination .pagination_button {
+    left: 0;
+    margin: -11px 10px 0;
+}
+
+
+
+.pagination_button prev,
+.pagination_button next {
+    display: inline-block;
+    width: 22px;
+    margin: 0 10px;
+    height: 22px;
+    vertical-align: top;
+}
+
+.custom_pagination .pagenum a:active,
+.custom_pagination .pagenum a:hover{    
+	font-weight: 700;
+    color: #000;
+}
+
+.custom_pagination .pagenum, 
+.custom_pagination .pagenum a {
+    display: inline-block;
+    min-width: 10px;
+    padding: 0 5px;
+    font-size: 16px;
+}
+
+.custom_pagination .pagenum span {
+    border-bottom: 1px solid #333;
+}
+
+.custom_pagination .pagenum a {
+    font-weight: 300;
+    color: #d4d4d4;
+    cursor: pointer;
+}
+
+svg:not(:root) {
+    overflow: hidden;
+}
+
+/******************** 버튼 *********************/
+.modi_btn {
+    box-shadow:inset 0px 1px 0px 0px #ffffff;
+    background:linear-gradient(to bottom, #f9f9f9 5%, #e9e9e9 100%);
+    background-color:#f9f9f9;
+    border-radius:6px;
+    border:1px solid #dcdcdc;
+    display:inline-block;
+    cursor:pointer;
+    color:#666666;
+    font-family:Arial;
+    font-size:11px;
+    font-weight:bold;
+    padding:5px 10px;
+    text-shadow:0px 1px 0px #ffffff;
+}
+.modi_btn:hover {
+    background:linear-gradient(to bottom, #e9e9e9 5%, #f9f9f9 100%);
+    background-color:#e9e9e9;
+}
+.modi_btn:active {
+    position:relative;
+    top:1px;
+}
+
+.modi_span a {
+    text-decoration: none;
+}
+
+.buttons {
+    padding-top: 10px;
+    float: right;
+}
+
+.write_btn {
+    padding-left: 10px;
+    padding-right: 10px;
+    
+    display: inline-block;
+    line-height: 25px;
+    text-align: center;
+    background-color:rgb(219, 52, 115);
+    border: 1px solid rgb(219, 52, 115);
+    color: #fff;
+    font-size: 14px;
+}
+
+.board_write_btn {
+    text-align: center;
+}
+
+.write_btn:hover {
+    background-color:rgba(219, 52, 115, 0.85);
+    border: 1px solid rgba(219, 52, 115, 0.85);
+    color: white;
+    text-decoration: none;
+}
+
+/************ 글쓰기 페이지 *************/
+.page_section {
+    float: right;
+    width: 900px;
+}
+
+.xans-board-write .boardWrite2 {
+    table-layout: fixed;
+    border-top: 2px solid #333;
+    width:900px; /*글쓰기 창*/
+    line-height: 180%;
+    padding-left:300px;
+}
+
+input, select, textarea, button {
+    font-family: noto sans,malgun gothic,AppleGothic,dotum;
+    line-height: 1;
+    letter-spacing: -.05em;
+    color: #4c4c4c;
+    font-size: 12px;
+    /* max-width: 90%; */
+}
+
+.boardWrite2 th {
+    text-align: center;
+    background-color: #f8f8f8;
+    font-size: 15px;
+}
+
+.boardWrite2 td {
+    padding-left:15px;
+}
+
+.bhs_button, .cancel_btn{
+    font-family: noto sans,malgun gothic,AppleGothic,dotum;
+    width: 50px;
+    display: inline-block;
+    line-height: 25px;
+    text-align: center;
+    background-color:rgb(219, 52, 115);
+    border: 1px solid rgb(219, 52, 115);
+    color: #fff;
+    font-size: 13px;
+}
+
+.bhs_button:hover, .cancel_btn:hover{
+    font-family: noto sans,malgun gothic,AppleGothic,dotum;
+    display: inline-block;
+    line-height: 25px;
+    text-align: center;
+    background-color:rgba(219, 52, 115, 0.85);
+    border: 1px solid rgba(219, 52, 115, 0.85);
+    color: #fff;
+    font-size: 13px;
+}
+
+.del_button {
+    font-family: noto sans,malgun gothic,AppleGothic,dotum;
+    width: 50px;
+    display: inline-block;
+    line-height: 25px;
+    text-align: center;
+    background-color:rgb(219, 52, 115);
+    border: 1px solid rgb(219, 52, 115);
+    color: #fff;
+    font-size: 13px;
+}
+.del-button:hover{
+    display: inline-block;
+    line-height: 25px;
+    text-align: center;
+    background-color:rgba(219, 52, 115, 0.85);
+    border: 1px solid rgba(219, 52, 115, 0.85);
+    color: #fff;
+    font-size: 12px;
+}

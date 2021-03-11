@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+	PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+	"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="kr.or.eutchapedia.movie.detail.repository.CommentReportMapper">
+
+<insert id="reportComment" parameterType="kr.or.eutchapedia.movie.detail.domain.CommentReportVo">
+	INSERT INTO comment_report VALUES(
+		seq_comment_report.nextval,
+		#{commentIndex},
+		#{memberEmail},
+		#{reportText}
+	)
+</insert>
+
+<!-- comment_report_count 올리기 -->
+<update id="updateReportCount">
+	UPDATE eutcha_comment
+	SET comment_report_count = comment_report_count + 1
+	WHERE comment_index = #{_parameter}
+
+</update>
+
+</mapper>

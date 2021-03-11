@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE mapper
+	PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+	"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="kr.or.eutchapedia.mypage.dao.MypageSortDao">
+	<!-- 보고싶어요 영화 select 가나다순-->
+   <select id="selectwwsort1" parameterType="String" resultMap="WannaWatchVo" >
+	    select a.*, b.title, b.prodyear, b.poster_uri  from wanna_watch a join movie_info b 
+	    on a.fk_movie_docid = b.movie_docid 
+	    where a.fk_member_email = #{_parameter}
+	    order by b.title asc
+   </select>
+   
+   <!-- 보고싶어요 영화 select 신작순-->
+   <select id="selectwwsort2" parameterType="String" resultMap="WannaWatchVo" >
+	    select a.*, b.title, b.prodyear, b.poster_uri  from wanna_watch a join movie_info b 
+	    on a.fk_movie_docid = b.movie_docid 
+	    where a.fk_member_email = #{_parameter}
+	    order by b.prodyear desc
+   </select>
+   
+   <!-- 보고싶어요 영화 select 구작순-->
+   <select id="selectwwsort3" parameterType="String" resultMap="WannaWatchVo" >
+	    select a.*, b.title, b.prodyear, b.poster_uri  from wanna_watch a join movie_info b 
+	    on a.fk_movie_docid = b.movie_docid 
+	    where a.fk_member_email = #{_parameter}
+	    order by b.prodyear asc
+   </select>
+   
+   <!-- 보고싶어요 영화 select 담은순-->
+   <select id="selectwwsort4" parameterType="String" resultMap="WannaWatchVo" >
+	    select a.*, b.title, b.prodyear, b.poster_uri  from wanna_watch a join movie_info b 
+	    on a.fk_movie_docid = b.movie_docid 
+	    where a.fk_member_email = #{_parameter}
+	    order by a.wanna_watch_date desc
+   </select>
+   
+     <select id="selectwwSearch" parameterType="String" resultMap="WannaWatchVo" >
+	    select a.*, b.title, b.prodyear, b.poster_uri  from wanna_watch a join movie_info b 
+	    on a.fk_movie_docid = b.movie_docid 
+	    where a.fk_member_email = #{memberemail}
+	    and b.title LIKE '%' || #{findstr} || '%'
+	    order by b.title asc
+   </select>
+   
+   <!-- 평가영화관련 select 가나다순 -->
+   <select id="selectRMsort1" parameterType="String" resultMap="StarRatingForMainVo" >
+	    select a. *, 
+		c.title, 
+		c.nation, 
+		c.movie_running_time, 
+		c.prodyear, 
+		c.poster_uri, 
+		c.genre, 
+		c.major_genre
+		from star_rating a, (SELECT A.*, B.MAJOR_GENRE 
+		FROM MOVIE_INFO A JOIN MAJOR_GENRE B 
+		ON A.MOVIE_DOCID = B.FK_MOVIE_DOCID ) c
+		where a.fk_member_email = #{_parameter}
+		and a.fk_movie_docid = c.movie_docid
+		order by c.title asc
+   </select>
+   
+   <!-- 평가영화관련 select 구작순 -->
+   <select id="selectRMsort2" parameterType="String" resultMap="StarRatingForMainVo" >
+	    select a. *, 
+		c.title, 
+		c.nation, 
+		c.movie_running_time, 
+		c.prodyear, 
+		c.poster_uri, 
+		c.genre, 
+		c.major_genre
+		from star_rating a, (SELECT A.*, B.MAJOR_GENRE 
+		FROM MOVIE_INFO A JOIN MAJOR_GENRE B 
+		ON A.MOVIE_DOCID = B.FK_MOVIE_DOCID ) c
+		where a.fk_member_email = #{_parameter}
+		and a.fk_movie_docid = c.movie_docid
+		order by c.prodyear asc
+   </select>
+   
+   <!-- 평가영화관련 select 신작순 -->
+   <select id="selectRMsort3" parameterType="String" resultMap="StarRatingForMainVo" >
+	    select a. *, 
+		c.title, 
+		c.nation, 
+		c.movie_running_time, 
+		c.prodyear, 
+		c.poster_uri, 
+		c.genre, 
+		c.major_genre
+		from star_rating a, (SELECT A.*, B.MAJOR_GENRE 
+		FROM MOVIE_INFO A JOIN MAJOR_GENRE B 
+		ON A.MOVIE_DOCID = B.FK_MOVIE_DOCID ) c
+		where a.fk_member_email = #{_parameter}
+		and a.fk_movie_docid = c.movie_docid
+		order by c.prodyear desc
+   </select>
+   
+   <!-- 평가영화관련 select 긴 러닝타임순 -->
+   <select id="selectRMsort4" parameterType="String" resultMap="StarRatingForMainVo" >
+	    select a. *, 
+		c.title, 
+		c.nation, 
+		c.movie_running_time, 
+		c.prodyear, 
+		c.poster_uri, 
+		c.genre, 
+		c.major_genre
+		from star_rating a, (SELECT A.*, B.MAJOR_GENRE 
+		FROM MOVIE_INFO A JOIN MAJOR_GENRE B 
+		ON A.MOVIE_DOCID = B.FK_MOVIE_DOCID ) c
+		where a.fk_member_email = #{_parameter}
+		and a.fk_movie_docid = c.movie_docid
+		order by TO_NUMBER(c.movie_running_time) desc
+   </select>
+   
+   <resultMap
+		type="kr.or.eutchapedia.mypage.entity.WannaWatchVo" id="WannaWatchVo">
+		<result column="wanna_watch_index" property="wannaWatchIndex" />
+		<result column="fk_member_email" property="memberEmail" />
+		<result column="fk_movie_docid" property="movieDocid" />
+		<result column="wanna_watch_date" property="wannaWatchDate" />
+		<result column="title" property="title" />
+		<result column="prodyear" property="prodYear" />
+		<result column="poster_uri" property="posterUri" />
+  </resultMap>
+  
+  <resultMap
+		type="kr.or.eutchapedia.mypage.entity.StarRatingForMainVo" id="StarRatingForMainVo">
+		<result column="star_index" property="starIndex" />
+		<result column="fk_movie_docid" property="movieDocId" />
+		<result column="fk_member_email" property="memberEmail" />
+		<result column="star_rating" property="starRating" />
+		<result column="title" property="title" />
+		<result column="nation" property="nation" />
+		<result column="movie_running_time" property="movieRunningTime" />
+		<result column="prodyear" property="prodYear" />
+		<result column="poster_uri" property="posterUri" />
+		<result column="genre" property="genre" />
+		<result column="major_genre" property="majorGenre" />
+  </resultMap>
+</mapper> 

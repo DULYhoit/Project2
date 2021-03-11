@@ -1,0 +1,95 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap");
+
+.mybody-wrapper {
+  height: 150%;
+  font-family: "Noto Sans KR", sans-serif;
+  margin-left: 50px;
+}
+.title {
+  margin-left: 20px;
+  font-size: 1.4em;
+  font-weight: 600;
+  letter-spacing: -1.4px;
+  border-bottom: 1px solid rgb(194, 194, 194);
+  line-height: 3em;
+}
+
+.moviewrapper {
+  margin-left:10px;
+  float: left;
+}
+
+#modal-div {
+  width: 370px;
+  height: 500px;
+  font-size: 1rem;
+  line-height: 3rem;
+  color: gray;
+}
+.sortwrapper {
+  margin-top: 20px;
+}
+.sortbtn {
+  margin-left: 20px;
+}
+#sorttext {
+  border-bottom: 1px solid rgb(221, 217, 217);
+}
+
+#sorttext:hover {
+  font-weight: bolder;
+}
+
+#modal-header {
+  display: block;
+}
+#modal-title {
+  text-align: center;
+  color: black;
+}
+
+#xbtn {
+  color: rgb(255, 7, 88);
+  font-weight: bolder;
+}
+
+.movietitle{
+	margin-top:3px;
+	max-height: 20px;
+	width : 140px;
+	display : inline-block;
+	color: black;
+	font-size: 0.9rem;
+	font-weight:500;
+	overflow:hidden;
+	text-overflow:ellipsis;
+}
+
+.movie-div {
+	width: 150px;  
+	height:200px;
+	margin-bottom: 50px;
+}
+
+.poster {
+	border-radius: 5px;
+}
+
+.search {
+	display : inline-block;
+	margin-left : 20px;
+	
+}
+
+#search {
+	height : 35px;
+	border :1px solid #D8D8D8;
+	background-color: white;
+	
+}
+.sbtn {
+	height : 35px;
+	border :1px solid rgb(255,7,88);
+	background-color: rgb(255,7,88) !important;
+	color: white;
+}

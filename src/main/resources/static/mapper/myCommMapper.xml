@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+	PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+	"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="kr.or.eutchapedia.mypage.dao.MyCommMapper">
+	<resultMap type="kr.or.eutchapedia.mypage.entity.CommentVo" id="CommentVo">
+		<result column="comment_index" property="commentIndex"/>
+		<result column="comment_text" property="commentText"/>
+		<result column="comment_date" property="commentDate"/>
+		<result column="title" property="title"/>
+		<result column="fk_movie_docid" property="movieDocId"/>
+		<result column="movie_docid" property="movie_docid"/>
+		<result column="fk_member_email" property="memberEmail"/>
+		<result column="star_rating" property="starRating"/>
+	</resultMap>
+	<resultMap type="kr.or.eutchapedia.mypage.entity.MyQnaVo" id="MyQnaVo">
+		<result column="qna_no" property="qnaNo"/>
+		<result column="member_email" property="memberEmail"/>
+		<result column="qna_title" property="qnaTitle"/>
+		<result column="qna_content" property="qnaContent"/>
+		<result column="qna_date" property="qnaDate"/>
+		<result column="qna_files" property="qnaFiles"/>
+		<result column="qna_filename" property="qnaFilename"/>
+		<result column="qna_answer" property="qnaAnswer"/>
+		<result column="answer_content" property="answerContent"/>
+		<result column="answer_files" property="answerFiles"/>
+		<result column="a_content" property="aContent"/>
+		<result column="qna_filepath" property="qnaFilepath"/>
+	</resultMap>
+	<select id="selectComm" resultType="kr.or.eutchapedia.mypage.entity.CommentVo" 
+							parameterType="kr.or.eutchapedia.mypage.entity.CommentVo">
+			SELECT mi.title
+					, mi.movie_docid
+                    , ec.comment_text
+					, ec.comment_date 
+					, sr.fk_member_email
+					, sr.star_rating 
+				FROM 
+					eutcha_comment ec
+				JOIN 
+					star_rating sr
+				ON 
+					ec.fk_star_index = sr.star_index
+					JOIN
+						movie_info mi
+					ON
+						sr.fk_movie_docid = mi.movie_docid
+				where 
+                    sr.fk_member_email = #{memberEmail}
+                    ORDER BY ec.comment_date DESC
+     </select>
+     <select id="selectQna" resultType="kr.or.eutchapedia.mypage.entity.MyQnaVo"
+     						parameterType="kr.or.eutchapedia.mypage.entity.MyQnaVo">
+     SELECT
+     	*
+     	FROM
+     		QNA
+     		WHERE
+     			MEMBER_EMAIL = #{memberEmail}
+     			ORDER BY QNA_NO DESC
+     						
+     </select>
+     <delete id="deleteQna" parameterType="String">
+    	DELETE
+    	FROM
+    		QNA
+    		WHERE
+    			QNA_NO = ${qnaNo,jdbcType=LONGVARCHAR} 
+     </delete>
+</mapper>

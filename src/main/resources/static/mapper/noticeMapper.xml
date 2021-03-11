@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+	PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+	"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="kr.or.eutchapedia.board.notice.mapper.NoticeMapper">
+	<select id="boardList" parameterType="kr.or.eutchapedia.board.notice.domain.Criteria" resultType="kr.or.eutchapedia.board.notice.domain.NoticeVo">
+		<![CDATA[
+					SELECT
+							NOTICE_NO
+							, member_email
+							, NOTICE_TITLE
+							, NOTICE_CONTENT
+							, NOTICE_DATE
+							, NOTICE_FILES
+							, NOTICE_PUB
+					FROM (
+						SELECT /*+INDEX_DESC(NOTICE NOTICE_PK) */
+								ROWNUM AS RNUM
+										, NOTICE_NO
+										, member_email
+										, NOTICE_TITLE
+										, NOTICE_CONTENT
+										, NOTICE_DATE
+										, NOTICE_FILES
+										, NOTICE_PUB
+							FROM NOTICE
+							WHERE ROWNUM <= #{pageNum} * #{amount}
+						)
+					WHERE RNUM BETWEEN (#{pageNum}-1) * #{amount}+1 AND #{pageNum} * #{amount}
+				]]>
+	</select>
+	<select id="totalCnt" resultType="int">
+	<![CDATA[
+		SELECT 
+			COUNT(*)
+			FROM
+				NOTICE
+	]]>
+	</select>
+	<select id="boardDetail" parameterType="int" resultType="kr.or.eutchapedia.board.notice.domain.NoticeVo">
+		SELECT
+			*
+			FROM NOTICE
+			WHERE
+				NOTICE_NO = ${noticeNo}
+	</select>
+	<insert id="insertNotice" parameterType="kr.or.eutchapedia.board.notice.domain.NoticeVo">
+		INSERT INTO
+				NOTICE (
+						NOTICE_NO
+						, member_email
+						, NOTICE_TITLE
+						, NOTICE_CONTENT 
+						, NOTICE_FILES
+						, NOTICE_PUB
+				)
+				VALUES (
+						NOTICE_SEQ.NEXTVAL
+						, 'admin@eutcha.com'
+						, #{noticeTitle}
+						, #{noticeContent}
+						, #{noticeFiles,jdbcType=NVARCHAR}
+						, DEFAULT
+						)
+	</insert>
+	<update id="updateNotice" parameterType="kr.or.eutchapedia.board.notice.domain.NoticeVo">
+		UPDATE NOTICE
+			SET 
+				NOTICE_TITLE = #{noticeTitle}
+				, NOTICE_CONTENT = #{noticeContent}
+				, NOTICE_FILES = #{noticeFiles,jdbcType=NVARCHAR}
+				, NOTICE_PUB = #{noticePub}
+			WHERE 
+				NOTICE_NO = #{noticeNo}
+	</update>
+	<delete id="deleteNotice" parameterType="int">
+		DELETE
+			FROM NOTICE
+			WHERE
+				NOTICE_NO = ${noticeNo,jdbcType=LONGVARCHAR}
+	</delete>
+	<select id="getMember" resultType="kr.or.eutchapedia.board.notice.domain.MemberCheckVo">
+		SELECT * FROM MEMBER WHERE member_email = #{member}
+	</select>
+</mapper>

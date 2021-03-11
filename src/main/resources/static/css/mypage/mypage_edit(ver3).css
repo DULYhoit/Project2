@@ -1,0 +1,139 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap");
+.main-title {
+  font-size: 2.5rem;
+  color: rgb(151, 150, 151);
+  letter-spacing: -0.1rem;
+  border-bottom: 1px solid rgb(223, 219, 219);
+}
+
+.title-div {
+  padding-top: 20px;
+  padding-left: 40px;
+  padding-bottom: 20px;
+}
+.mybody-wrapper {
+  position: relative;
+  height: 170%;
+  margin: 0 auto;
+  width: 500px;
+  font-family: "Noto Sans KR", sans-serif;
+}
+
+.formbox {
+  max-width: 400px;
+  height: 60vh;
+  padding: 0 45px 100px 45px;
+}
+
+.inputbox-div > label {
+  display: block;
+}
+
+.inputbox-div > textarea {
+  height: 150px;
+}
+
+.atag {
+  text-decoration: none !important;
+  color: rgb(151, 150, 151);
+}
+
+.atag:hover {
+  color: rgb(151, 150, 151);
+}
+.bodytitle {
+  text-align: center;
+  letter-spacing: 1rem;
+}
+
+.inputbox {
+  width: 400px;
+  height: 60px;
+  margin-bottom: 20px;
+  background-color: rgb(220, 250, 218);
+  cursor: pointer;
+}
+
+.profile {
+  margin-left: 35%;
+}
+
+#info {
+  color: red;
+  display: block;
+  display: none;
+}
+
+input,
+textarea {
+  padding: 10px;
+  font-weight: bold;
+  color: rgb(111, 110, 110);
+  /* border-radius: 10px; */
+  border: 2px solid rgb(218, 216, 218);
+}
+
+#inputbox {
+  background-color: rgb(255, 7, 88);
+  color: white;
+  font-size: 1.3rem;
+  border: 0px;
+}
+
+#inputbox:hover {
+  background-color: rgb(49, 223, 6);
+
+  transition: all 0.5s ease-out;
+  color: white;
+}
+
+#email {
+  background-color: rgb(209, 211, 211);
+}
+
+/* .imgbox {
+  width: 400px;
+  height: 60px;
+  margin-bottom: 20px;
+  border: 0px;
+  display: none;
+} */
+
+.changefile {
+  display: none;
+}
+
+.withdraw {
+  text-align: center;
+  display: inline-block;
+  width: 400px;
+}
+
+#changepwddiv {
+  display: none;
+}
+
+#nowpwd {
+  background-color: rgb(209, 211, 211);
+}
+
+#changebtn {
+  margin-left: 10px;
+  border: 0;
+  padding: 0;
+  display: inline-block;
+  position: absolute;
+  width: 70px;
+  height: 25px;
+  text-align: center;
+  vertical-align: center;
+  font-size: 0.9rem;
+  border-radius: 20px;
+  border: 0.5px solid gray;
+  background-color: white;
+}
+
+#changebtn:hover {
+  background-color: rgb(255, 7, 88);
+  color: white;
+}

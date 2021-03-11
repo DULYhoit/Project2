@@ -1,0 +1,58 @@
+#pick-h1{
+    text-align: center;
+    margin-top: 25px;
+}
+#dash-container{
+    
+    display: inline-block;
+}
+#dash-comment{
+    width: 100%;
+    height: 400px;
+    background-color: white;
+    
+    
+    
+}
+#dash-search{
+    width: 100%;
+    height: 400px;
+    margin-top: 60px;
+    background-color: white;
+    
+}
+#newperson-container{
+    
+
+float: right;
+    
+    
+}
+
+#newperson{
+    width: 100%;
+    height: 860px;
+    background-color: white;
+}
+#newperson-header{
+    border-bottom: 2px solid #dcdcdc;
+}
+#newperson-header >h4{
+    width: 100px;
+    display: inline-block;
+}
+#newperson-header > small{
+    margin-left:280px ;
+    display: inline-block;
+    
+}
+#newperson-main{
+    margin-top: 10px;
+   
+}
+#main-info{
+    margin-left: 30px;
+}
+    
+    
+

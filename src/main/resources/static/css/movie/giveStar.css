@@ -1,0 +1,405 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap");
+body{
+    background-color: #f8f8f8;
+}
+
+ul{
+   list-style: none;
+}
+
+.movie_image{
+cursor: pointer;
+}
+
+.movie_title{
+	cursor: pointer;
+}
+
+.movie_title {
+
+    margin-top: 10px;
+    color: rgb(0, 0, 0);
+    font-size: 21px;
+    font-weight: 700;
+    letter-spacing: -0.7px;
+    line-height: 28px;
+}
+#allcontents{
+    
+    background-color: white;
+    width: 600px;
+    height: 1800px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 110px;
+        border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+}
+
+.modal_button {
+
+    position: relative;
+    right: -450px;
+}
+
+
+.fas fa-ellipsis-v   {
+padding: 0px;
+    border: none;
+    margin: 0px;
+    cursor: pointer;
+    vertical-align: top;
+    width: 24px;
+    height: 24px;
+    cursor: pointer;
+}
+
+.movie_info{
+    color: rgb(120, 120, 120);
+    font-size: 14px;
+    font-weight: 400;
+    letter-spacing: -0.3px;
+    line-height: 19px;
+    margin: 0px 0px 14px;
+}
+.movie_wrap{
+
+    position: relative;
+    overflow: hidden;
+    box-sizing: border-box;
+    border: 1px solid rgba(0, 0, 0, 0.08);
+    border-radius: 3px;
+    vertical-align: top;
+    width: 100%;
+     margin-left: 10px;
+    height: 100%;
+    background: rgb(248, 248, 248);
+    transition: all 300ms ease 0s;
+    display: inline-block;
+}
+
+
+
+#search-btn{
+	width: 600px;
+	margin-top: 5px;
+	margin-bottom: 10px; 
+	background-color: #ff0458;
+	border-color: #ff0458;
+}
+
+.movie_content{
+    display: flex;
+}
+
+.movie {
+    padding-left: 0px;
+}
+
+.movie_image{
+    position: relative;
+    overflow: hidden;
+    box-sizing: border-box;
+    border: 1px solid rgba(0, 0, 0, 0.08);
+    border-radius: 3px;
+    vertical-align: top;
+    width: 100%;
+    height: 100%;
+    background: rgb(248, 248, 248);
+    transition: all 300ms ease 0s;
+
+}
+
+.eachMovie{
+    display: flex;
+    -webkit-box-align: center;
+    align-items: center;
+    padding: 12px 0px;
+    border-bottom: 1px solid rgb(237, 237, 237);
+}
+.movie_name{
+    
+    color: rgb(0, 0, 0);
+    font-size: 17px;
+    letter-spacing: -0.5px;
+    line-height: 22px;
+    margin: 0px 0px 2px;
+    font-weight: normal !important;
+
+}
+
+.movie_poster{
+	    cursor: pointer;
+    margin-left: 30px;
+    width: 76px;
+    height: 110px;
+    margin: 0px 16px 10px 0px;
+
+}
+
+.poster > img{
+    width: 200px;
+    height: 50px;
+    margin-left: 20px;
+
+
+}
+
+
+.h1{
+    font-family: "Noto Sans KR", sans-serif;
+    text-align: center;
+}
+
+#top_wrap{
+    text-align: center;
+    margin-top: 20px;
+}
+
+
+.big-box {
+    width: 100%;
+    background-color: gray;
+    height: 100vh;
+    border-top: 1px solid black;
+  }
+
+.movielist
+{
+    background-color: white;
+    width: 600px;
+    height: 1200px;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+  
+  
+  #mid_wrap{
+  	background: white;
+  }
+  
+#modal_btn{
+    cursor: pointer;
+}
+
+.css-2e4qsb-UnratedStars {
+    display: inline-block;
+    position: relative;
+    vertical-align: top;
+    height: 40px;
+}
+
+.css-1gvptyb-StarImg {
+    display: inline-block;
+    background: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI0NCIgaGVpZ2h0PSI0NCIgdmlld0JveD0iMCAwIDQ0IDQ0Ij4KICAgIDxnIGZpbGw9Im5vbmUiIGZpbGwtcnVsZT0iZXZlbm9kZCI+CiAgICAgICAgPHBhdGggZmlsbD0iI0VFRSIgZD0iTTIyIDMzLjQ0NEw5LjgzIDQyLjMyN2MtLjc4NC41NzItMS44NDItLjE5Ni0xLjUzOS0xLjExOGw0LjY4Ny0xNC4zMkwuNzY5IDE4LjA2Yy0uNzg3LS41NjktLjM4My0xLjgxMi41ODgtMS44MWwxNS4wNjcuMDMzIDQuNjI0LTE0LjM0Yy4yOTgtLjkyNCAxLjYwNi0uOTI0IDEuOTA0IDBsNC42MjQgMTQuMzQgMTUuMDY3LS4wMzNjLjk3MS0uMDAyIDEuMzc1IDEuMjQxLjU4OCAxLjgxbC0xMi4yMDkgOC44MjkgNC42ODggMTQuMzJjLjMwMi45MjItLjc1NiAxLjY5LTEuNTQgMS4xMThMMjIgMzMuNDQ0eiIvPgogICAgPC9nPgo8L3N2Zz4K) center center / contain no-repeat;
+    vertical-align: top;
+    width: 40px;
+    height: 40px;
+}
+
+    .css-1puda00-RatedStars {
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        white-space: nowrap;
+        width: 0px;
+        height: 40px;
+        overflow: hidden;
+    }
+
+
+    .css-1sondvb-ContentInfo {
+        display: flex;
+  
+    }
+
+    .css-bhgne5-StyledBackground {
+        display: inline-block;
+        position: absolute;
+        inset: 0px;
+        background-size: cover;
+        background-position: center center;
+        background-repeat: no-repeat;
+        opacity: 1;
+        
+        transition: all 300ms ease 0s;
+    }
+
+
+    .css-rch8ql-ContentTitleContainer {
+        display: flex;
+        flex: 1 1 0%;
+        flex-direction: column;
+        -webkit-box-pack: center;
+        justify-content: center;
+        padding: 10px 0px;
+    }
+
+    .css-1k6r5nr-RowActionButtons
+{
+    border-top: 1px solid rgb(240, 240, 240);
+}
+
+    .css-1s4ktoa-RowActionButton-WishButton {
+        display: inline-flex;
+        flex-direction: column;
+        -webkit-box-pack: center;
+        justify-content: center;
+        -webkit-box-align: center;
+        align-items: center;
+        color: rgb(0, 0, 0);
+        font-size: 15px;
+        font-weight: 400;
+        letter-spacing: -0.5px;
+        line-height: 20px;
+        box-sizing: border-box;
+        width: 50%;
+        padding: 13px 0px 15px;
+        cursor: pointer;       
+
+        border-right: 1px solid rgb(240, 240, 240);
+    }
+
+
+
+
+    .css-9gb35z-RowActionButton-WatchingButton {
+        display: inline-flex;
+        flex-direction: column;
+        -webkit-box-pack: center;
+        justify-content: center;
+        -webkit-box-align: center;
+        align-items: center;
+        color: rgb(0, 0, 0);
+        font-size: 15px;
+        font-weight: 400;
+        letter-spacing: -0.5px;
+        line-height: 20px;
+        box-sizing: border-box;
+        margin-left: 60px;
+        padding: 13px 0px 15px;
+        cursor: pointer;
+        
+    }
+    .css-4w0dnp-ColumnActionButton-CancelButton {
+        -webkit-box-align: center;
+        align-items: center;
+        font-size: 15px;
+        letter-spacing: -0.5px;
+        line-height: 20px;
+        font-size: 22px;
+        font-weight: bold;
+        border-bottom: 1px solid rgb(240, 240, 240);
+        cursor: pointer;
+        display: inline-block;
+        color: rgb(255, 47, 110);
+       
+        text-align: center;
+        width: 100%;
+        padding: 15px 0px;
+    }
+
+    img {
+        border-style: none;
+    }
+
+
+
+
+
+
+    #howMany {
+        display: flex;
+        -webkit-box-pack: center;
+        justify-content: center;
+        font-size: 25px;
+        font-weight: 700;
+        letter-spacing: -0.9px;
+        line-height: 30px;
+        padding-top: 13px;
+        margin: 0px;
+    }
+
+ 
+    #count_comment {
+        display: flex;
+        -webkit-box-pack: center;
+        justify-content: center;
+        -webkit-box-align: center;
+        align-items: center;
+        color: rgb(120, 120, 120);
+        text-align: center;
+        font-size: 15px;
+        font-weight: 400;
+        letter-spacing: -0.5px;
+        line-height: 20px;
+        height: 40px;
+    }
+
+
+/* 癰귢쑴�젎 */
+.star {
+    cursor: pointer;
+}
+.starR1 {
+	background: url('/img/movie/star_empty.svg') no-repeat 0;
+	background-size: auto 100%;
+	width: 20px;
+	height: 44px;
+	float: left;
+	text-indent: -9999px;
+}
+
+.starR2 {
+	background: url('/img/movie/star_empty.svg') no-repeat right 0;
+	background-size: auto 100%;
+	width: 20px;
+	height: 44px;
+	float: left;
+	text-indent: -9999px;
+}
+
+.starR1.on {
+	background: url('/img/movie/star_rated.svg') no-repeat right 0;
+	background-position: 0 0;
+}
+
+.starR2.on {
+	background: url('/img/movie/star_rated.svg') no-repeat right 0;
+	background-position: -23px 0;
+}
+
+
+
+
+/* 筌욑옙占쎌겱占쎈뻷 css */
+#button-for-signup {
+    background-color: rgb(255, 7, 88);
+    color: white;
+    width: 200px;
+    border: none;
+    font-weight: bold;
+}
+
+#button-for-signin {
+    width: 200px;
+    border: none;
+    background-color: white;
+    color: rgb(255, 7, 88);
+    font-weight: bold;
+}
+#modal-contents {
+    text-align: center;
+}
+
+#modal-contents img {
+    width: 80px;
+    height: 80px;
+    margin-bottom: 20px;
+}
+
+#modal-contents p {
+    font-weight: bold;
+
+}

@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE mapper
+	PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+	"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="kr.or.eutchapedia.main.repository.MainMapper">
+	
+	
+	<!-- 영화정보 select -->
+	<select id="selectMovieInfo" resultMap="movieInfo"
+		parameterType="String">
+
+		SELECT * FROM movie_info
+		WHERE movie_docid =
+		#{movieDocId}
+	</select>
+
+	<!-- 왓챠 순위 -->
+	<select id="selectWatchaList" resultMap="movieInfo" parameterType="map">
+		SELECT D.AVG , C.*
+		FROM (SELECT mi.*,mr.* FROM movie_ranking mr
+		JOIN movie_info mi 
+		ON mr.fk_movie_docid = mi.movie_docid
+		WHERE mr.movie_platform = 'W') C
+		
+		LEFT OUTER JOIN
+		(SELECT TRUNC(AVG(star_rating), 1) as AVG, FK_MOVIE_DOCID
+		FROM STAR_RATING
+		GROUP BY FK_MOVIE_DOCID) D
+		
+		ON D.FK_MOVIE_DOCID = C.MOVIE_DOCID
+		order by c.movie_ranking asc 
+	</select>
+	
+	<!-- 넷플릭스 순위 -->
+	<select id="selectNetflixList" resultMap="movieInfo" parameterType="map">
+		SELECT D.AVG , C.*
+		FROM (SELECT mi.*,mr.* FROM movie_ranking mr
+		JOIN movie_info mi
+		ON mr.fk_movie_docid = mi.movie_docid
+		WHERE mr.movie_platform = 'N') C
+		
+		LEFT OUTER JOIN
+		(SELECT TRUNC(AVG(star_rating), 1) as AVG, FK_MOVIE_DOCID
+		FROM STAR_RATING
+		GROUP BY FK_MOVIE_DOCID) D
+		
+		ON D.FK_MOVIE_DOCID = C.MOVIE_DOCID
+		order by C.movie_ranking asc 
+		
+		
+	</select>
+	
+	<!-- 인기 검색어 순위 -->
+	
+	<select id="selectSearchList" resultMap="movieInfo" parameterType="map">
+		SELECT F.AVG , E.* FROM (
+        SELECT rownum movieranking, mi.* FROM(
+		SELECT * FROM movie_info ORDER BY movie_hit_count desc)mi
+		<![CDATA[WHERE rownum < 11]]>) E
+        
+        LEFT OUTER JOIN
+		(SELECT TRUNC(AVG(star_rating), 1) as AVG, FK_MOVIE_DOCID
+		FROM STAR_RATING
+		GROUP BY FK_MOVIE_DOCID) F		
+        ON F.FK_MOVIE_DOCID = E.MOVIE_DOCID
+	</select>
+	
+		
+	<!-- 인기 리뷰 순위 -->
+	
+	<select id="selectReviewList" resultMap="movieInfo" parameterType="map">
+		SELECT F.AVG , E.* FROM (
+        SELECT rownum movieRanking, ec.* FROM(
+		select sr.star_rating,mi.movie_docid, mi.title, mi.prodyear,mi.poster_uri,mi.nation, ec.comment_like_count from movie_info mi INNER JOIN star_rating sr ON mi.movie_docid = sr.fk_movie_docid
+		INNER JOIN eutcha_comment ec ON sr.star_index = ec.fk_star_index  order by ec.comment_like_count desc)ec
+		<![CDATA[WHERE rownum < 11]]>) E	
+        
+        LEFT OUTER JOIN
+		(SELECT TRUNC(AVG(star_rating), 1) as AVG, FK_MOVIE_DOCID
+		FROM STAR_RATING
+		GROUP BY FK_MOVIE_DOCID) F		
+        ON F.FK_MOVIE_DOCID = E.MOVIE_DOCID
+        ORDER BY E.comment_like_count DESC
+				
+	</select>
+	
+	
+	<!-- resultmap -->
+	<resultMap type="kr.or.eutchapedia.main.entity.MovieInfoVo" id="movieInfo">
+		<result column="movie_docid" property="movieDocId" />
+		<result column="title" property="title" />
+		<result column="title_org" property="titleOrg" />
+		<result column="nation" property="nation" />
+		<result column="movie_running_time" property="movieRunningTime" />
+		<result column="rating" property="rating" />
+		<result column="prodyear" property="prodYear" />
+		<result column="poster_uri" property="posterUri" />
+		<result column="genre" property="genre" />
+		<result column="plot" property="plot" />
+		<result column="movie_trailer" property="movieTrailer" />
+		<result column="movie_hit_count" property="movieHitCount" />
+		<result column="MOVIERANKING" property="movieRankingIndex" />
+		<result column="movie_ranking" property="movieRanking" />
+		<result column="movie_platform" property="moviePlatform" />
+		<result column="comment_like_count" property="commentLikeCount"/>
+		<result column="star_Rating" property="starRating"/>
+		<result property="ratingAvg" column="AVG"/>
+	</resultMap>
+
+
+</mapper>

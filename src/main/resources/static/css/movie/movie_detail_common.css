@@ -1,0 +1,507 @@
+@import
+	url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap')
+	;
+
+* {
+	box-sizing: border-box;
+}
+
+html, body {
+	margin: 0;
+	padding: 0;
+	height: 100%;
+	margin-top: 200px;
+	font-family: 'Noto Sans KR', sans-serif;
+}
+
+
+a:link,
+a {
+    line-height: normal;
+    outline: none;
+    text-decoration: none;
+}
+
+ul,li {
+
+    list-style-type: none;
+    margin-block-start: 0;
+    margin-block-end: 0;
+    padding-inline-start: 0;
+    margin-top: 0;
+    margin-bottom: 0;
+    line-height: 0;
+}
+
+header {
+	position: fixed;
+	width: 100%;
+	height: 100px;
+	z-index: 1000;
+}
+
+ul, li {
+	list-style: none;
+}
+
+a {
+	text-decoration: none;
+}
+
+header a:hover {
+	text-decoration: none;
+}
+
+#main-container {
+	position: relative;
+	width: 1280px;
+	margin: 0 auto;
+	height: 2000px;
+	margin-top: 200px;
+}
+
+#basic-info-and-rating {
+	height: 250px;
+	margin-left: 140px;
+}
+
+#poster {
+	position: relative;
+	width: 166px;
+	height: 230px;
+	overflow: hidden;
+	top: -30px;
+}
+
+#basic-info {
+	width: 800px;
+	position: absolute;
+	margin: 0 auto;
+	display: inline-block;
+	left: 0;
+	top: 2px;
+	display: block;
+	left: 140px;
+	margin-left: 200px;
+}
+
+#basic-info h1 {
+	font-weight: 700;
+	font-size: 33px;
+}
+
+#watch-or-comment {
+	margin-top: 40px;
+}
+
+#wanna-watch {
+	width: 250px;
+	height: 40px;
+	background-color: rgb(255, 7, 88);
+	border: none;
+	font-weight: 500;
+	padding: 0 16px;
+}
+
+#wanna-watch:hover {
+	background-color: white;
+	color: rgb(255, 7, 88);
+	border: 2px solid rgb(255, 7, 88);
+	font-weight: bold;
+	transition: all 0.2s ease;
+}
+
+#modal-contents p {
+	font-weight: bold;
+}
+
+/* common */
+#main-info-container {
+	width: 1000px;
+	height: 395vh;
+	margin: 0 auto;
+	padding: 0 40px;
+	border: 0.5px solid #e3e3e3;
+	border-radius: 0.4rem;
+}
+
+.detail-info {
+	margin: 30px 0 15px;
+	border-bottom: 1px solid #e3e3e3;
+	padding-bottom: 30px;
+}
+
+.detail-info h4 {
+	font-weight: bold;
+	display: inline-block;
+}
+
+#trailer-title {
+	padding-bottom: 15px;
+}
+
+#trailer-zone {
+	border-bottom: 1px solid #e3e3e3;
+}
+
+#video-zone {
+	width: 900px;
+	height: 550px;
+	margin: 0 auto;
+}
+
+.more-info a {
+	float: right;
+	font-size: 18px;
+	color: rgb(255, 7, 88);
+}
+
+.more-info a:hover {
+	text-decoration: none;
+	font-weight: bold;
+	color: rgb(255, 7, 88);
+	transition: all 0.2s ease;
+}
+
+#plot {
+	margin-top: 10px;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	display: -webkit-box;
+	-webkit-line-clamp: 3; /* 라인수 */
+	-webkit-box-orient: vertical;
+	word-wrap: break-word;
+	line-height: 1.2em;
+	height: 3.6em;
+}
+/* h4 출연/제작*/
+#actor-and-pd {
+	margin-bottom: 50px;
+}
+
+#staffs-slider {
+	position: relative;
+	width: 900px;
+	height: 150px;
+	margin: 0 auto;
+	display: block;
+	padding: 0 100px 30px;
+}
+
+/* slider(common) */
+.my-slider button {
+	position: absolute;
+	z-index: 10;
+	top: 50%;
+	transform: translateY(-50%);
+	width: 50px;
+	height: 50px;
+	border-radius: 100%;
+	border: none;
+	background-color: rgba(0, 0, 0, .5);
+}
+
+.my-slider .slick-prev {
+	left: 0;
+	font-size: 0;
+	color: transparent;
+}
+
+.my-slider .slick-prev:before {
+	content: "\e93d";
+}
+
+.my-slider .slick-next {
+	right: 0;
+	font-size: 0;
+	color: transparent;
+}
+
+.my-slider button:before {
+	font-family: "xeicon";
+	color: #fff;
+	font-size: 25px;
+}
+
+.my-slider .slick-next:before {
+	content: "\e940";
+}
+
+.slider-elements {
+	display: inline-block;
+	width: 270px;
+	height: 67px;
+}
+
+.slider-elements a {
+	color: black;
+}
+
+.slider-elements a:hover {
+	color: black;
+	font-weight: bold;
+	text-decoration: none;
+}
+
+.profile-img {
+	width: 60px;
+	height: 60px;
+	display: inline-block;
+}
+
+.name-and-role {
+	width: 200px;
+	height: 70px;
+	padding: 10px;
+	margin-top: 10px;
+	display: inline-block;
+	margin: 0 auto;
+}
+
+/* chart 감싸는 div(common)*/
+#chart-container {
+	width: 900px;
+	height: 450px;
+}
+
+/* 코멘트 관련 css(common)*/
+.comment-card {
+	display: inline-block;
+	width: 270px;
+	height: 300px;
+	margin-right: 30px;
+	margin-top: 10px;
+	background-color: #e3e3e3;
+}
+
+.user-info-and-rating {
+	height: 70px;
+	padding: 10px;
+	border-bottom: 1px solid #aaa;
+}
+
+.comment-card img {
+	width: 50px;
+	height: 50px;
+}
+
+.user-nickname {
+	display: inline-block;
+	margin: 10px;
+	font-size: 20px;
+}
+
+.comment-star-rating {
+	display: inline-block;
+	margin: 10px;
+	font-size: 20px;
+}
+/* 코멘트 div 내부 좋아요 관련(common) */
+#like-thumb {
+	width: 25px;
+	height: 25px;
+	margin: 8px 10px 10px;
+}
+
+#like-count {
+	width: 100px;
+	height: 40px;
+	padding: 10px 0;
+}
+
+.like-count-zone {
+	height: 40px;
+	border-bottom: 1px solid #aaa;
+}
+
+.comment {
+	height: 150px;
+	border-bottom: 1px solid #aaa;
+	padding: 15px;
+}
+
+/* 말줄임 처리 */
+.comment p {
+	overflow: hidden;
+	display: -webkit-box;
+	-webkit-line-clamp: 5;
+	-webkit-box-orient: vertical;
+}
+
+/* 좋아요 / 신고하기 버튼 (common) */
+.like-and-report button {
+	font-size: 18px;
+	border: none;
+	margin: 5px 8px;
+	background-color: #e3e3e3;
+}
+
+.like-and-report button:hover {
+	color: black;
+	font-weight: bold;
+	transition: all 0.2s ease;
+}
+
+/* chart 감싸는 div(common)*/
+#chart-container {
+	width: 900px;
+	height: 450px;
+}
+
+/* 코멘트 관련 css(common)*/
+.comment-card {
+	display: inline-block;
+	width: 270px;
+	height: 300px;
+	margin-right: 30px;
+	margin-top: 10px;
+	background-color: #e3e3e3;
+}
+
+.user-info-and-rating {
+	height: 70px;
+	padding: 10px;
+	border-bottom: 1px solid #aaa;
+}
+
+.comment-card img {
+	width: 50px;
+	height: 50px;
+}
+
+.user-nickname {
+	display: inline-block;
+	margin: 10px;
+	font-size: 20px;
+}
+
+.comment-star-rating {
+	display: inline-block;
+	margin: 10px;
+	font-size: 20px;
+}
+
+/* 코멘트 div 내부 좋아요 관련(common) */
+#like-thumb {
+	width: 25px;
+	height: 25px;
+	margin: 8px 10px 10px;
+}
+
+.like-count {
+	width: 100px;
+	height: 40px;
+	padding: 10px 0;
+}
+
+.like-count-zone {
+	height: 40px;
+	border-bottom: 1px solid #aaa;
+}
+
+.comment {
+	height: 150px;
+	border-bottom: 1px solid #aaa;
+	padding: 15px;
+}
+
+/* 말줄임 처리 */
+.comment p {
+	overflow: hidden;
+	display: -webkit-box;
+	-webkit-line-clamp: 5;
+	-webkit-box-orient: vertical;
+}
+
+/* 좋아요 / 신고하기 버튼 (common) */
+.like-and-report button {
+	font-size: 18px;
+	border: none;
+	margin: 5px 8px;
+	background-color: #e3e3e3;
+}
+
+.like-and-report button:hover {
+	color: black;
+	font-weight: bold;
+	transition: all 0.2s ease;
+}
+
+/* 컬렉션 */
+#collection {
+	border: none;
+}
+
+.collection-zone {
+	display: inline-block;
+	margin-right: 40px;
+	color: black;
+}
+
+.collection-card {
+	width: 220px;
+	height: 300px;
+	margin-top: 10px;
+	
+}
+
+/*collection*/
+.photo_list {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 200px;
+    height: 250px;
+    background-color: transparent;
+    background-color: rgba(230, 223, 223, 0.349);
+    border-radius: 2px;
+}
+
+.collection-title {
+	font-size: 20px;
+	margin: 10px 0;
+	font-weight: 600;
+}
+
+/* 별점 */
+.star {
+	cursor: pointer;
+}
+
+.starR1 {
+	background: url('/img/movie/star_empty.svg') no-repeat 0;
+	background-size: auto 100%;
+	width: 20px;
+	height: 44px;
+	float: left;
+	text-indent: -9999px;
+}
+
+.starR2 {
+	background: url('/img/movie/star_empty.svg') no-repeat right 0;
+	background-size: auto 100%;
+	width: 20px;
+	height: 44px;
+	float: left;
+	text-indent: -9999px;
+}
+
+.starR1.on {
+	background: url('/img/movie/star_rated.svg') no-repeat right 0;
+	background-position: 0 0;
+}
+
+.starR2.on {
+	background: url('/img/movie/star_rated.svg') no-repeat right 0;
+	background-position: -23px 0;
+}
+
+.data-empty-message {
+	font-size: 25px;
+	font-weight: bold;
+	text-align: center;
+	width: 100%;
+	height: 100px;
+	padding-top: 20px;
+}

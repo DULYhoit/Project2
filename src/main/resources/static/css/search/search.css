@@ -1,0 +1,329 @@
+@charset "UTF-8";
+
+.page_search_sction {
+    display: block;
+    height: auto !important;
+    box-sizing: border-box;
+    padding-top: 72px;
+
+}
+
+.detailed_search_info {
+    padding: 8px 0px 0px;
+}
+
+.search_wrap ul {
+    list-style: none;
+}
+
+.tit_content {
+    margin: 0px 20px;
+}
+
+.title_search_header {
+    overflow: hidden;
+    display: block;
+}
+
+.search_wrap h2 {
+    display: block;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    margin-block-start: 0.83em;
+    margin-block-end: 0.83em;
+}
+
+.search_wrap .title_search {
+    float: left;
+    color: #000;
+    font-size: 19px;
+    font-weight: 700;
+    letter-spacing: -0.7px;
+    line-height: 28px;
+    margin: 8px 0px;
+}
+
+.search_info_container {
+    position: relative;
+    transform: translate3d(0,0,0);
+}
+
+.container_inner {
+    margin: 0 20px;
+}
+
+.container_inner .content_poster_list {
+	display: inline-block;
+    list-style: none;
+    padding: 0;
+    white-space: nowrap;
+    margin-right: -5px !important;
+    margin-left: -5px !important;
+    margin: 14px 0 0;
+    width: 200px;
+    height: 330px;
+}
+
+.top_result_elements {
+    display: inline-block;
+    vertical-align: top;
+    box-sizing: border-box;
+    padding: 0 5px;
+    margin: 0 0 24px;
+    width: 200px;
+    height: 330px;
+}
+
+.content_poster_list a {
+    display: inline-block;
+    text-decoration: none;
+    cursor: pointer;
+    width: 100%;
+}
+
+.content_poster_block {
+    position: relative;
+    width: 100%;
+    height: 0;
+    padding-bottom: 145.370370%;
+}
+
+.lazy_loading_image {
+    position: absolute;
+    overflow: hidden;
+    top: 0;
+    left: 0;
+    box-sizing: border-box;
+    width: 100%;
+    height: 100%;
+    border: 1px solid #eae9e8;
+    border-radius: 5px;
+    background: #f8f8f8;
+}
+
+.styled_img {
+    vertical-align: top;
+    width: 100%;
+    height: 100%;
+    opacity: 1;
+    object-fit: cover;
+    transition: opacity 420ms ease 0s;
+}
+
+.container_inner .content_info {
+    text-align: left;
+    width: calc(100% - 10px);
+    margin: 5px 10px 0 0;
+}
+
+.content_info .result_title {
+    color: #1f1f1f;
+    font-size: 16px;
+    font-weight: 400;
+    letter-spacing: -0.5px;
+    line-height: 20px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.content_info .result_extra_info {
+    color: #a0a0a0;
+    font-size: 13px;
+    font-weight: 400;
+    letter-spacing: -0.2px;
+    line-height: 18px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.content_info .result_content_type {
+    color: #a0a0a0;
+    font-size: 12px;
+    font-weight: 400;
+    letter-spacing: -0.2px;
+    line-height: 16px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.search_wrap hr {
+    box-sizing: content-box;
+    height: 0;
+    overflow: visible;
+}
+
+.container_line {
+    border: 0;
+    border-bottom: 1px solid #f0f0f0;
+    margin: 0 20px;
+}
+
+/***************** 2번째 section - 영화 ****************/
+.content_stackable {
+    margin: 0;
+    display: flex;
+    flex-flow: wrap;
+    align-content: flex-start;
+    margin-right: -5px;
+    margin-left: -5px;
+    padding: 4px 0 16px;
+}
+
+.content_stackable .stackable_item {
+    box-sizing: border-box;
+    padding: 0 5px;
+    width: 33%;
+}
+
+.stackable_item a {
+    display: flex;
+    text-decoration: none;
+    cursor: pointer;
+    -webkit-box-align: center;
+    align-items: center;
+    color: inherit;
+    height: 76px;
+}
+
+.stackable_item .poster_block {
+    position: relative;
+}
+
+.item_styled_img {
+    position: relative;
+    overflow: hidden;
+    background: #f8f8f8;
+    box-sizing: border-box;
+    border: 1px solid rgba(0, 0, 0, 0.08);
+    border-radius: 3px;
+    width: 56px;
+    height: 56px;
+    margin: 0 12px 0 0;
+}
+
+.styled_background {
+    display: inline-block;
+    position: absolute;
+    inset: 0px;
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    opacity: 1;
+    transition: all 300ms ease 0s;
+}
+
+.info_block {
+    display: flex;
+    flex: 1;
+    -webkit-box-align: center;
+    align-items: center;
+    box-sizing: border-box;
+    height: 100%;
+    border-bottom: 1px solid #f0f0f0;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.info_block .item_info {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    -webkit-box-pack: center;
+    justify-content: center;
+    padding: 0 10px 0 0;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.item_info .item_title {
+    color: #1f1f1f;
+    font-size: 17px;
+    font-weight: 400;
+    letter-spacing: -0.7px;
+    line-height: 22px;
+    white-space: nowrap;
+    margin-bottom: 2px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.item_info .item_extra_info {
+    color: #8c8c8c;
+    font-size: 14px;
+    font-weight: 400;
+    letter-spacing: -0.3px;
+    line-height: 19px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+/***************** 3번째 section - 사용자 *****************/
+.user_info_list {
+    margin: 0;
+    display: flex;
+    flex-flow: column wrap;
+    align-content: flex-start;
+    margin-right: -5px;
+    margin-left: -5px;
+    padding: 4px 0 16px;
+}
+
+.user_info_list .user_info_item {
+	display: inline-block;
+    box-sizing: border-box;
+    width: 33%;
+}
+
+.user_info_item a {
+    display: flex;
+    text-decoration: none;
+    cursor: pointer;
+    -webkit-box-align: center;
+    align-items: center;
+    color: inherit;
+    height: 76px;
+}
+
+/* 사용자 프로필 사진 */
+.user_loading_img {
+    position: relative;
+}
+
+.user_loading_img .user_img_block {
+    border-radius: 50%;
+    display: flex;
+    position: relative;
+    -webkit-box-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    align-items: center;
+    width: 56px;
+    height: 56px;
+    overflow: hidden;
+    border: none;
+    margin: 0 12px 0 0;
+}
+
+.user_img_block .profile_image {
+    border-radius: 50%;
+    box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.08) inset;
+}
+
+.profile_image img{
+    position: relative;
+    z-index: 1;
+    background-size: cover;
+    width: 50px;
+    height: 50px;
+}
+
+.item_info .item_subtitle {
+    color: #8c8c8c;
+    font-size: 14px;
+    font-weight: 400;
+    letter-spacing: -0.3px;
+    line-height: 19px;
+    white-space: nowrap;
+    margin-top: 2px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}

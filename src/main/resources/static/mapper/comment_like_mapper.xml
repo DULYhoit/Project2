@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+	PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+	"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="kr.or.eutchapedia.movie.detail.repository.CommentLikeMapper">
+
+<!-- 해당 사용자가 좋아요 누른 적 있는지 확인 -->
+<select id="likeCheck" resultType="kr.or.eutchapedia.movie.detail.domain.CommentLikeVo">
+	SELECT like_check likeCheck, fk_comment_index commentIndex, fk_member_email memberEmail
+	FROM comment_like 
+	WHERE fk_comment_index = #{commentIndex} AND fk_member_email = #{memberEmail}                                                                                   
+	
+</select>
+
+<!-- like 개수 select -->
+<select id="selectLikeCount" parameterType="int" resultType="int">
+	SELECT comment_like_count likeCount
+	FROM eutcha_comment
+	WHERE comment_index = #{commentIndex} 
+	
+</select>
+
+<!-- 최초 좋아요 쿼리문 확인완료 -->
+<insert id="pressLike" parameterType="HashMap">
+	INSERT INTO comment_like VALUES(
+		seq_comment_like.nextval,
+		#{commentIndex},
+		#{memberEmail},
+		1
+	)
+</insert>
+<!-- 코멘트 좋아요 숫자 올리기 확인완료 -->
+<update id="updateLikeCount" parameterType="int">
+	UPDATE eutcha_comment 
+	SET comment_like_count = comment_like_count + 1 
+	WHERE comment_index = #{_parameter}
+</update>
+
+<!-- 좋아요 취소 쿼리문 -->
+<update id="cancelLike" parameterType="HashMap">
+	UPDATE comment_like 
+	SET like_check = 0
+	WHERE fk_member_email = #{memberEmail}
+	AND fk_comment_index = #{commentIndex}
+	
+</update>
+
+<!-- 좋아요 취소 시 코멘트 좋아요 숫자 내리기 -->
+<update id="cancelLikeCount" parameterType="int">
+	UPDATE eutcha_comment
+	SET comment_like_count = comment_like_count - 1
+	WHERE comment_index = #{_parameter}
+</update>
+
+<!-- 좋아요 취소 후 그 회원이 다시 좋아요 누를 시 -->
+<update id="updateLikeCheck" parameterType="HashMap">
+	UPDATE comment_like
+	SET like_check = 1
+	WHERE fk_member_email = #{memberEmail}
+	AND fk_comment_index = #{commentIndex}
+</update>
+
+
+</mapper>

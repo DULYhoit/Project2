@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE mapper
+	PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+	"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+	
+<mapper namespace="kr.or.eutchapedia.movie.rate.dao.MovierateDao">
+	<resultMap
+		type="kr.or.eutchapedia.movie.rate.entity.MovierateVo" id="movierate">
+		<id column="id" property="id" />
+		<result column="NUM" property="num" />
+		<result column="MOVIE_DOCID" property="movie_docid" />
+		<result column="TITLE" property="title" />
+		<result column="TITLE_ORG" property="title_Org" />
+		<result column="NATION" property="nation" />
+		<result column="MOVIE_RUNNING_TIME"
+			property="movie_running_time" />
+		<result column="RATING" property="rating" />
+		<result column="PRODYEAR" property="prodyear" />
+		<result column="POSTER_URI" property="poster_uri" />
+		<result column="GENRE" property="genre" />
+		<result column="PLOT" property="plot" />
+		<result column="MOVIE_TRAILER" property="movie_trailer" />
+		<result column="MOVIE_HIT_COUNT" property="movie_hit_count" />
+		<result column="MAJOR_GENRE" property="MAJOR_GENRE" />
+	</resultMap>
+
+	<select id="getMovieLists" resultMap="movierate"
+		resultType="Map" parameterType="hashmap">
+            
+            		SELECT * FROM(
+		SELECT ROWNUM NUM, m1.*
+		FROM (SELECT * FROM movie_info m 
+                            LEFT OUTER JOIN MAJOR_GENRE g ON m.movie_docid = g.fk_movie_docid
+		WHERE MAJOR_GENRE LIKE '%'||#{genre1}||'%') m1
+		) WHERE NUM BETWEEN ${st} AND ${en}
+            
+            
+	</select>
+
+	<select id="getMovieListsS" resultMap="movierate"
+		resultType="Map" parameterType="String">
+            
+            		SELECT * FROM(
+		SELECT ROWNUM NUM, m1.*
+		FROM (SELECT * FROM movie_info m 
+                            LEFT OUTER JOIN MAJOR_GENRE g ON m.movie_docid = g.fk_movie_docid
+		WHERE MAJOR_GENRE LIKE '%'||#{genre}||'%') m1
+		) WHERE NUM BETWEEN 1 AND 10
+            
+            
+	</select>
+
+	<select id="getmovierateList" resultMap="movierate"
+		parameterType="String">
+
+		select * from(
+		select * from movie_info m, star_rating s, member u
+		where m.movie_docid = s.fk_movie_docid
+		AND s.fk_member_email = u.member_email
+		AND u.member_email != '123' 	<!-- 가데이터 #{} -->
+		order by DBMS_RANDOM.RANDOM
+		)
+	</select>
+	<!-- movie리스트뽑아오기 -->
+	<!--<select id="getmovieList" resultMap="moviepage" parameterType="map"> 
+		SELECT * FROM( SELECT ROWNUM NUM, m.* FROM (SELECT * FROM MOVIE_INFO WHERE 
+		${field} LIKE '%'||#{query}||'%' ) m ) WHERE NUM BETWEEN #{page} AND #{amount} 
+		</select> -->
+</mapper>
